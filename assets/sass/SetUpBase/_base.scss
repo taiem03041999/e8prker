@@ -98,24 +98,6 @@ body {
     }
 }
 
-.gap {
-    &-20 {
-        height: 20px;
-
-        @include responsive_mobile {
-            height: 10px;
-        }
-
-        &.special {
-            height: 28px;
-
-            @include responsive_fit {
-                height: 20px;
-            }
-        }
-    }
-}
-
 .modal-backdrop.show {
     z-index: 1076;
     opacity: 0.86;
@@ -531,14 +513,4 @@ body .container-xl.special {
         margin-left: auto;
         margin-right: 0;
     }
-}
-
-.div-rep {
-    .user-detail__upload {
-        margin-top: 25px;
-    }
-}
-
-.div-rep + .div-rep {
-    margin-top: 30px;
 }
