@@ -1,0 +1,82 @@
+.footer {
+    background-color: #0c0c0e;
+
+    &-wrapper {
+        padding: 95px 0;
+    }
+
+    &-top {
+        @include gridBox(5, 20px, 20px);
+        padding-bottom: 60px;
+
+        &__inner {
+            &:first-child {
+                grid-column: span 2 / span 2;
+            }
+        }
+
+        &__logo {
+            max-width: 190px;
+            margin-bottom: 40px;
+        }
+
+        &__text {
+            width: 60%;
+            margin-bottom: 24px;
+        }
+
+        &__text,
+        &__link {
+            color: $color-all;
+        }
+
+        &__social {
+            @include flexBox(hor);
+        }
+
+        &__icon {
+            & + & {
+                margin-left: 20px;
+            }
+        }
+
+        &__title {
+            font-weight: 600;
+            margin-bottom: 32px;
+            font-size: 16px;
+        }
+
+        &__menu {
+            .footer-top__link + .footer-top__link {
+                margin-top: 16px;
+            }
+        }
+    }
+
+    &-main {
+        padding: 32px 0;
+        border-top: 1px solid rgba($color: #fff, $alpha: 0.2);
+
+        &__menu {
+            @include flexBox(hor);
+
+            .footer-top__link + .footer-top__link {
+                margin-left: 35px;
+            }
+        }
+    }
+
+    &-bottom {
+        padding-top: 50px;
+
+        &__text * {
+            all: revert;
+            color: $color-all;
+        }
+
+        &__cover {
+            margin-top: 50px;
+            @include gridBox(5, 32px, 32px);
+        }
+    }
+}
