@@ -1,0 +1,84 @@
+.form {
+    margin-top: -120px;
+    padding-top: 100px;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 42px;
+        left: 8px;
+
+        width: 101%;
+        height: 100%;
+        border-radius: 60px 60px 0 0;
+        background-color: #fff;
+        background-position-y: top;
+        z-index: -1;
+        transform: rotate(-3deg);
+    }
+
+    &-detail {
+        &__title {
+            color: $color-main;
+            text-align: center;
+            font-size: 24px;
+            font-weight: 900;
+            line-height: normal;
+            margin-bottom: 30px;
+        }
+
+        &__group {
+            & + & {
+                margin-top: 18px;
+            }
+        }
+
+        &__input {
+            width: 100%;
+            border-radius: 55px;
+            border: 1px solid rgba(0, 147, 1, 0.24);
+            background: #fff;
+
+            padding: 6px 22px;
+            font-family: $font-sub;
+
+            &::placeholder {
+                color: #575757;
+                font-family: $font-sub;
+                font-size: 15px;
+                font-weight: 400;
+                line-height: normal;
+            }
+
+            &.special {
+                padding-top: 10px;
+                border-radius: 15px;
+            }
+        }
+
+        &__btn {
+            padding: 5px 20px 4px;
+            border-radius: 20px;
+            border: 1px solid rgba(0, 147, 1, 0.38);
+            @include flexBox(both);
+            background-color: transparent;
+            margin: 0 auto;
+
+            color: $color-main;
+            text-transform: uppercase;
+            text-align: center;
+            font-size: 15px;
+            font-weight: 900;
+            line-height: normal;
+            transition: all 0.3s;
+
+            &:hover {
+                background-color: $color-main;
+                color: #fff;
+            }
+        }
+    }
+}

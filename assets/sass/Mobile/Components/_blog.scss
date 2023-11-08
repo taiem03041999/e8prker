@@ -1,0 +1,108 @@
+.blog {
+    &-wrapper {
+        padding: 35px 0 60px;
+    }
+
+    &-list {
+        @include gridBox(1, 45px, 45px);
+        margin-top: 40px;
+    }
+
+    &-item {
+        &.special {
+            @include flexBox(hor);
+
+            .blog-item {
+                &__img {
+                    min-width: 45%;
+                    min-width: 160px;
+                    height: 160px;
+                    padding-top: 0%;
+                }
+
+                &__text {
+                    margin: 0 0 0 15px;
+                }
+
+                &__title {
+                    @include lineDot(3);
+                }
+            }
+        }
+
+        &__img {
+            @include imgPT(84%);
+            border-radius: 18px;
+        }
+
+        &__text {
+            margin-top: 24px;
+        }
+
+        &__title {
+            color: #009301;
+            font-size: 15px;
+            text-transform: uppercase;
+
+            font-weight: 700;
+            line-height: normal;
+            margin-bottom: 10px;
+            @include lineDot(2);
+        }
+
+        &__sub {
+            color: #575757;
+            text-align: justify;
+            font-family: $font-sub;
+
+            font-size: 15px;
+            font-weight: 400;
+            line-height: normal;
+            @include lineDot(5);
+        }
+    }
+
+    &-detail {
+        &__title {
+            color: $color-main;
+            font-size: 18px;
+            font-weight: 900;
+            line-height: normal;
+            margin-bottom: 25px;
+        }
+
+        &__content * {
+            all: revert;
+        }
+
+        &__content {
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        &__source {
+            color: $color-main;
+            text-align: right;
+            font-family: $font-sub;
+
+            font-size: 17px;
+            font-weight: 700;
+            line-height: normal;
+            margin-top: 25px;
+        }
+    }
+
+    &-slider {
+        &__title {
+            color: $color-main;
+            font-size: 22px;
+            text-transform: uppercase;
+
+            font-weight: 900;
+            line-height: normal;
+            margin-bottom: 20px;
+        }
+    }
+}

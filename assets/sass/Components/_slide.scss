@@ -1,0 +1,23 @@
+.slide {
+    padding: 0 0 110px;
+    overflow: hidden;
+
+    &-heading {
+        font-size: 18px;
+        padding-bottom: 24px;
+    }
+
+    .swiper {
+        // overflow: initial;
+
+        &-slide-prev {
+            visibility: hidden;
+        }
+    }
+
+    .training {
+        &-secondary {
+            margin-top: 0;
+        }
+    }
+}

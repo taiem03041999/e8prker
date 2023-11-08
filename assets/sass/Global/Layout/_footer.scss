@@ -1,0 +1,270 @@
+.footer {
+    position: relative;
+    margin-top: 12px;
+    padding: 140px 0 75px;
+
+    @include responsive_alway {
+        padding: 62px 0 60px;
+    }
+
+    @include responsive_HD {
+        margin-top: 25px;
+        padding: 42px 0 60px;
+    }
+
+    &::after {
+        position: absolute;
+        z-index: -1;
+        content: "";
+        top: 0;
+        right: 0;
+
+        width: 75%;
+        height: 100%;
+        background-size: contain;
+        background-position: right bottom;
+        background-repeat: no-repeat;
+        background-image: $footer-bg;
+
+        @include responsive_big {
+            width: 74%;
+        }
+
+        @include responsive_big16 {
+            width: 76%;
+        }
+
+        @include responsive_fit {
+            background-size: cover;
+            background-position: left bottom;
+        }
+
+        @include responsive_pcLower {
+            width: 86%;
+        }
+
+        @include responsive_bothTM {
+            top: auto;
+            bottom: 0;
+            width: 100%;
+            height: 66%;
+
+            background-image: $footer-after;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position-y: top;
+        }
+    }
+
+    &::before {
+        position: absolute;
+        z-index: 0;
+        content: "";
+        bottom: 0;
+        right: 0;
+
+        width: 50%;
+        height: 78%;
+        background-size: contain;
+        background-position: right bottom;
+        background-repeat: no-repeat;
+        background-image: $footer-sub;
+
+        @include responsive_bigLow {
+            width: 57%;
+        }
+
+        @include responsive_fit {
+            width: 60%;
+        }
+
+        @include responsive_fitLow {
+            width: 65%;
+        }
+
+        @include responsive_bothTM {
+            width: 78%;
+            background-image: $footer-sub-mb;
+        }
+
+        @include responsive_table {
+            width: 58%;
+        }
+
+        @include responsive_mobile {
+            width: 78%;
+        }
+    }
+
+    &-wrapper {
+        @include flexBox(hor);
+
+        @include responsive_big16 {
+            justify-content: space-between;
+        }
+        @include responsive_bothTM {
+            flex-direction: column;
+        }
+    }
+
+    &-info {
+        width: 40%;
+
+        @include responsive_fit {
+            width: 22%;
+        }
+
+        @include responsive_bothTM {
+            width: 100%;
+        }
+
+        &__cover {
+            @include flexBox(hor);
+        }
+
+        &__text {
+            font-size: 14px;
+            font-family: $font-sub;
+            margin: 12px 0;
+        }
+
+        &__legal {
+            &:first-child {
+                margin-right: 19px;
+            }
+        }
+
+        &__logo {
+            & > img {
+                @include responsive_bothTM {
+                    max-width: 213px;
+                }
+            }
+        }
+    }
+
+    &-nav {
+        position: relative;
+        z-index: 1;
+        @include flexBox(top);
+        justify-content: space-between;
+
+        width: 46%;
+        margin-top: 44px;
+        color: #fff;
+
+        @include responsive_big16 {
+            width: 54%;
+        }
+
+        @include responsive_fit {
+            margin-top: 24px;
+        }
+
+        @include responsive_fitLow {
+            width: 60%;
+        }
+
+        @include responsive_pcLower {
+            width: 66%;
+        }
+
+        @include responsive_bothTM {
+            margin-top: 100px;
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        @include responsive_mobile {
+            padding-left: 30px;
+        }
+
+        &__title {
+            text-transform: uppercase;
+            font-weight: 800;
+            margin-bottom: 10px;
+            display: inline-block;
+
+            @include responsive_bothTM {
+                font-size: 15px;
+            }
+        }
+
+        &__detail {
+            @include responsive_fitLow {
+                padding-right: 14px;
+            }
+
+            @include responsive_bothTM {
+                padding-right: 0;
+            }
+        }
+
+        &__item {
+            line-height: 1.6;
+            font-weight: 500;
+
+            @include responsive_pcLower {
+                font-size: 15px;
+            }
+
+            @include responsive_bothTM {
+                font-size: 15px;
+            }
+
+            &:hover {
+                text-decoration: underline;
+            }
+
+            & + & {
+                margin-top: 5px;
+            }
+        }
+
+        &__special {
+            @include flexBox(top);
+            flex-direction: column;
+        }
+
+        &__detail + &__special {
+            @include responsive_bothTM {
+                margin-top: 35px;
+            }
+        }
+
+        &__detail,
+        &__special {
+            @include responsive_table {
+                width: 50%;
+            }
+
+            @include responsive_mobile {
+                width: 100%;
+            }
+        }
+
+        &__social {
+            margin-top: 30px;
+            @include flexBox(hor);
+
+            @include responsive_bothTM {
+                @include gridBox(5, 20px, 20px);
+            }
+        }
+
+        &__img {
+            @include responsive_bothTM {
+                @include flexBox(both);
+            }
+
+            & + & {
+                margin-left: 20px;
+
+                @include responsive_bothTM {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+}

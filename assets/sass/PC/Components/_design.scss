@@ -1,0 +1,43 @@
+.design {
+    margin-top: 95px;
+
+    @include responsive_fit {
+        margin-top: 50px;
+    }
+
+    &-wrapper {
+        padding: 78px 0px 73px 80px;
+        background-color: #dcffdd;
+        border-radius: 60px;
+
+        @include responsive_fitLow {
+            padding: 56px 0px 66px 65px;
+        }
+    }
+
+    &-slide {
+        margin: 55px 0 50px;
+    }
+
+    &-item {
+        &__img {
+            border-radius: 40px;
+            overflow: hidden;
+            border: 1.4px solid #19af1a;
+
+            @include imgPT(100%);
+        }
+
+        &__title {
+            margin-top: 16px;
+            font-size: 17px;
+            font-weight: 900;
+            line-height: 1.4;
+            @include lineDot(3);
+
+            @include responsive_fitLow {
+                font-size: 16px;
+            }
+        }
+    }
+}

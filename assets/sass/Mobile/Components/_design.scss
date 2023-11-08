@@ -1,0 +1,29 @@
+.design {
+    &-wrapper {
+        padding: 43px 0px 20px 25px;
+        background-color: #dcffdd;
+        border-radius: 60px;
+    }
+
+    &-slide {
+        margin: 35px 0;
+    }
+
+    &-item {
+        &__img {
+            border-radius: 15px;
+            overflow: hidden;
+            border: 1.4px solid #19af1a;
+
+            @include imgPT(100%);
+        }
+
+        &__title {
+            margin-top: 10px;
+            font-size: 13px;
+            font-weight: 900;
+            line-height: 1.4;
+            @include lineDot(4);
+        }
+    }
+}

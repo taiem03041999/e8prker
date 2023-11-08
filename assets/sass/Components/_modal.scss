@@ -1,0 +1,344 @@
+.modal {
+  background-color: rgba($color: #fff, $alpha: 0.3);
+  backdrop-filter: blur(4px);
+
+  &-book {
+    &__content {
+      padding: 35px;
+      border-radius: 20px;
+      background-color: #fff !important;
+
+      @include responsive_mobile {
+        padding: 40px 15px 20px;
+      }
+    }
+
+    &__close {
+      position: absolute;
+      right: -40px;
+      top: 0;
+      border: 0;
+      background-color: transparent;
+
+      @include responsive_mobile {
+        top: 10px;
+        right: 15px;
+      }
+    }
+
+    &__header {
+      @include flexBox(bothSides);
+      margin-bottom: 20px;
+    }
+
+    &__title {
+      font-size: 20px;
+    }
+
+    &__step {
+      @include flexBox(hor);
+    }
+
+    &__stepSub {
+      @include flexBox(both);
+      width: 40px;
+      height: 40px;
+
+      color: #9f9f9f;
+      font-weight: 500;
+      border-radius: 50%;
+      border: 2px solid #9f9f9f;
+      position: relative;
+
+      &.active {
+        background-color: $color-main;
+        color: #fff;
+        border-color: $color-main;
+      }
+
+      &:first-child {
+        color: $color-main;
+        border-color: $color-main;
+        background-color: transparent;
+
+        &::after {
+          content: "";
+          position: absolute;
+          right: -37px;
+          top: 50%;
+          transform: translateY(-50%);
+
+          width: 25px;
+          height: 2px;
+          border-radius: 2px;
+          background-color: $color-main;
+        }
+      }
+
+      & + & {
+        margin-left: 45px;
+      }
+    }
+
+    &__cmt {
+      @include flexBox(top);
+      margin: 24px 0;
+    }
+
+    &__avt {
+      min-width: 50px;
+      height: 50px;
+      @include imgPT(0%);
+      margin-right: 15px;
+      border-radius: 50%;
+    }
+
+    &__text {
+      border: 1px solid $color-yellow;
+      padding: 20px;
+      border-radius: 0 20px 20px 20px;
+      background-color: rgba($color: $color-yellow, $alpha: 0.1);
+      font-size: 14px;
+      color: $color-yellow;
+    }
+
+    &__btnWrap {
+      @include flexBox(hor);
+
+      button {
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+
+    &__btnSub {
+      border: 0;
+      background-color: #000;
+      padding: 0 15px;
+
+      height: 45px;
+      border-radius: 30px 0 0 30px;
+      min-width: 100px;
+      margin-right: -25px;
+    }
+
+    &__btn {
+      border: 0;
+      background-color: $color-main;
+      padding: 0 15px;
+
+      height: 45px;
+      border-radius: 30px;
+      width: 100%;
+
+      & > span {
+        font-size: 15px;
+        text-transform: uppercase;
+        color: #fff;
+        margin-right: 15px;
+        font-weight: 500;
+      }
+    }
+
+    &__list {
+      margin-bottom: 40px;
+
+      @include responsive_big16 {
+        margin-bottom: 30px;
+      }
+
+      &.special {
+        margin-bottom: 0;
+        max-height: 400px;
+        overflow-x: auto;
+        width: 100%;
+
+        @include responsive_HD {
+          max-height: max-content;
+        }
+      }
+    }
+
+    &__item {
+      & + & {
+        margin-top: 30px;
+      }
+    }
+
+    &__question {
+      font-weight: bold;
+      color: $color-desc;
+      margin-bottom: 8px;
+    }
+
+    &__sub {
+      color: $color-desc;
+      margin-bottom: 15px;
+    }
+  }
+
+  &-chat {
+    &__body {
+      height: 750px;
+      @include flexBox(bothSides);
+      flex-direction: column;
+
+      @include responsive_big16 {
+        height: 600px;
+      }
+    }
+
+    &__list {
+      width: 100%;
+      max-height: 100%;
+      overflow-x: auto;
+      padding: 0 10px 20px 0;
+
+      &.special {
+        position: relative;
+        left: 10px;
+        bottom: 0;
+
+        padding: 0 10px 20px;
+        margin-bottom: 64px;
+        width: calc(100% - 10px);
+        max-height: calc(100% - 64px);
+
+        @include responsive_mobile {
+          width: 100%;
+          left: 0;
+        }
+      }
+
+      &::-webkit-scrollbar {
+        width: 10px;
+      }
+
+      /* Track */
+      &::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 2px grey;
+        border-radius: 10px;
+      }
+
+      /* Handle */
+      &::-webkit-scrollbar-thumb {
+        background: $color-main;
+        border-radius: 7px;
+      }
+
+      /* Handle on hover */
+      &::-webkit-scrollbar-thumb:hover {
+        background: $color-main;
+      }
+    }
+
+    &__item {
+      @include flexBox(top);
+
+      & + & {
+        margin-top: 20px;
+      }
+
+      &.special {
+        flex-direction: row-reverse;
+
+        .modal-chat {
+          &__content {
+            margin: 0 15px 0 0;
+          }
+
+          &__text {
+            background-color: $color-main;
+            border-color: $color-main;
+            border-radius: 20px 0 20px 20px;
+            color: #fff;
+
+            @include responsive_mobile {
+              border-radius: 10px 0 10px 10px;
+              padding: 10px 15px;
+            }
+          }
+        }
+      }
+    }
+
+    &__avt {
+      min-width: 50px;
+      height: 50px;
+      @include imgPT(0%);
+      border-radius: 50%;
+    }
+
+    &__content {
+      margin-left: 15px;
+    }
+
+    &__text {
+      background-color: rgba($color: #eff3f7, $alpha: 0.5);
+      border: 1px solid rgba($color: $color-desc, $alpha: 0.1);
+      border-radius: 0 20px 20px 20px;
+      padding: 20px 25px;
+
+      @include responsive_mobile {
+        border-radius: 0 10px 10px 10px;
+        padding: 10px 15px;
+      }
+
+      &.special {
+        background-color: #fff;
+      }
+    }
+
+    &__time {
+      margin: 10px 0 0 25px;
+      font-size: 13px;
+      font-weight: 300;
+    }
+
+    &__time,
+    &__text {
+      color: $color-desc;
+    }
+
+    &__form {
+      width: 100%;
+      @include flexBox(bothSides);
+      padding-top: 15px;
+      border-top: 1px solid rgba($color: $color-desc, $alpha: 0.1);
+
+      &.special {
+        padding: 20px;
+        border-radius: 10px 10px 0 0;
+        background-color: #fff;
+        border-top: 0;
+
+        position: absolute;
+        bottom: 0;
+        left: 20px;
+        width: calc(100% - 40px);
+
+        @include responsive_mobile {
+          width: 100%;
+          left: 0;
+        }
+      }
+    }
+
+    &__input {
+      width: 100%;
+      border: 0;
+      background-color: transparent;
+      padding: 0 15px;
+
+      &::placeholder {
+        color: #d6d6d6;
+      }
+    }
+
+    &__btn {
+      border: 0;
+      background-color: transparent;
+    }
+  }
+}

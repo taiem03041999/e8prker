@@ -1,0 +1,72 @@
+.code {
+    margin: 80px 0;
+    min-height: 48.5vh;
+
+    @include responsive_bothTM {
+        min-height: auto;
+        margin: 46px 0 60px;
+    }
+
+    &-wrapper {
+        width: 35%;
+        @include flexBox(hor);
+        flex-direction: column;
+        justify-content: center;
+
+        @include responsive_pcLower {
+            margin-left: 8px;
+        }
+
+        @include responsive_table {
+            width: 50%;
+        }
+
+        @include responsive_mobile {
+            width: 91%;
+        }
+    }
+
+    &-img {
+        overflow: hidden;
+        border-radius: 5px;
+        padding: 18px 4px 4px;
+        background-color: #fff;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    }
+
+    &-info {
+        margin-top: 18px;
+
+        &__text {
+            font-weight: 500;
+            font-size: 18px;
+            text-align: center;
+            line-height: 1.5;
+
+            @include responsive_mobile {
+                line-height: 1.4;
+            }
+        }
+
+        &__btn {
+            width: 100%;
+            font-size: 17px;
+            margin-top: 18px;
+            padding: 10px 24px;
+
+            border: 0;
+            color: #fff;
+            border-radius: 5px;
+            background-color: $color-main;
+        }
+    }
+
+    .account-wrapper {
+        max-width: 88%;
+        margin: 0 auto;
+
+        @include responsive_fitLow {
+            max-width: 100%;
+        }
+    }
+}

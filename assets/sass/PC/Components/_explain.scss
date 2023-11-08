@@ -1,0 +1,276 @@
+.explain {
+    margin-top: 100px;
+
+    @include responsive_fit {
+        margin-top: 76px;
+    }
+
+    &-wrapper {
+        position: relative;
+        min-height: 449px;
+        @include flexBox(both);
+
+        @include responsive_fitLow {
+            min-height: 336px;
+        }
+
+        &.special {
+            .explain-item {
+                opacity: 0;
+
+                &.active {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    &-list {
+        &:first-child {
+            .explain-item {
+                padding-right: 45px;
+
+                &:first-child {
+                    padding-left: 100px;
+
+                    @include responsive_fitLow {
+                        padding-left: 10px;
+                    }
+                }
+            }
+        }
+
+        &:last-child {
+            .explain-item {
+                padding-left: 45px;
+
+                &::after {
+                    left: auto;
+                    right: 93%;
+                }
+
+                &::before {
+                    left: auto;
+                    right: calc(100% + 2px);
+                    transform: translateY(-50%) rotate(-30deg);
+
+                    @include responsive_big16 {
+                        right: calc(100% + 5px);
+                    }
+
+                    @include responsive_fitLow {
+                        right: calc(100% + 9px);
+                    }
+                }
+
+                &__desc {
+                    left: auto !important;
+                    right: calc(100% + 116px);
+                    bottom: -28px;
+                }
+
+                &:last-child {
+                    &::before {
+                        top: 14%;
+                        transform: translateY(-50%) rotate(30deg);
+                    }
+                }
+            }
+        }
+    }
+
+    &-item {
+        position: relative;
+        max-width: 437px;
+        opacity: 1;
+        transition: opacity 0.3s;
+
+        &::after {
+            position: absolute;
+            content: "";
+            left: 93%;
+            top: 50%;
+
+            height: 1.4px;
+            width: 40px;
+            background-color: $color-main;
+            transform: translateY(-50%);
+
+            @include responsive_fitLow {
+                top: 45%;
+            }
+        }
+
+        &::before {
+            position: absolute;
+            content: "";
+            left: calc(100% + 3px);
+            top: 86%;
+
+            height: 1.5px;
+            width: 90px;
+            background-color: $color-main;
+            transform: translateY(-50%) rotate(30deg);
+
+            @include responsive_big16 {
+                left: calc(100% + 5px);
+            }
+
+            @include responsive_fitLow {
+                left: calc(100% + 10px);
+            }
+        }
+
+        &:last-child {
+            &::before {
+                top: 14%;
+                transform: translateY(-50%) rotate(-30deg);
+            }
+
+            &::after {
+                @include responsive_fitLow {
+                    top: 55%;
+                }
+            }
+
+            .explain-item__desc {
+                bottom: calc(100% + 14px);
+                left: calc(100% + 125px);
+            }
+        }
+
+        &.active {
+            .explain-item__desc {
+                opacity: 1;
+            }
+        }
+
+        & + & {
+            margin-top: 66px;
+        }
+
+        &__desc,
+        &__text {
+            font-size: 18px;
+            font-weight: 500;
+            list-style-type: disc;
+        }
+
+        &__desc {
+            position: absolute;
+            left: calc(100% + 130px);
+            width: max-content;
+            opacity: 0;
+            transition: opacity 0.4s;
+        }
+
+        &__text {
+            color: $color-main;
+            font-style: italic;
+        }
+    }
+
+    &-info {
+        @include flexBox(hor);
+        color: $color-main;
+        font-weight: 900;
+
+        &__number {
+            font-size: 58px;
+            font-style: italic;
+            margin-right: 24px;
+            line-height: 1.1;
+
+            @include responsive_fitLow {
+                font-size: 50px;
+                margin-right: 18px;
+            }
+        }
+
+        &__text {
+            font-size: 22px;
+            line-height: 1.4;
+
+            @include responsive_big16 {
+                font-size: 19px;
+            }
+
+            @include responsive_fitLow {
+                font-size: 16px;
+            }
+        }
+    }
+
+    &-content {
+        position: relative;
+        @include flexBox(both);
+        flex-direction: column;
+
+        color: $color-main;
+        text-align: center;
+        margin: 0 110px;
+        line-height: 1;
+        text-transform: uppercase;
+        left: 0;
+        right: 0;
+
+        transition:
+            left 0.5s,
+            right 0.5s;
+
+        @include responsive_fit {
+            margin: 0px 130px;
+        }
+
+        @include responsive_fitLow {
+            margin: 0px 116px;
+        }
+
+        &.right {
+            left: 100%;
+            right: auto;
+        }
+
+        &.left {
+            right: 100%;
+            left: auto;
+        }
+
+        &__sub {
+            font-size: 33px;
+
+            @include responsive_fit {
+                font-size: 28px;
+            }
+
+            @include responsive_fitLow {
+                font-size: 25px;
+            }
+        }
+
+        &__name {
+            font-size: 82px;
+            font-weight: 900;
+            margin-bottom: 12px;
+
+            @include responsive_fit {
+                font-size: 64px;
+            }
+        }
+
+        &__icon {
+            position: absolute;
+            z-index: -1;
+            top: 36%;
+            left: 50%;
+            width: 100%;
+            @include flexBox(both);
+            transform: translate(-50%, -50%);
+
+            @include responsive_fitLow {
+                top: 40%;
+                width: 85%;
+            }
+        }
+    }
+}

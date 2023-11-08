@@ -1,0 +1,302 @@
+.header {
+    position: relative;
+    z-index: 99;
+
+    &.special {
+        min-height: 69px;
+
+        @include responsive_fitLow {
+            min-height: 59px;
+        }
+    }
+
+    &-wrapper {
+        padding: 34px 8px 0;
+        @include flexBox(bothSides);
+
+        @include responsive_fit {
+            padding: 6px 8px 0;
+        }
+    }
+
+    &-logo {
+        max-width: 200px;
+    }
+
+    &-nav {
+        @include flexBox(hor);
+
+        &__contact {
+            color: #fff;
+            @include flexBox(hor);
+
+            &:hover {
+                color: #fff;
+
+                .header-nav__text {
+                    text-decoration: underline;
+                }
+            }
+
+            & + & {
+                margin-left: 27px;
+            }
+
+            & > img,
+            & > svg {
+                margin-right: 7px;
+            }
+        }
+
+        &__text {
+            font-family: $font-sub;
+            transition: all 0.3s;
+        }
+
+        &__menu {
+            margin-left: 38px;
+            @include flexBox(hor);
+            flex-direction: column;
+            align-items: flex-end;
+
+            & > span {
+                display: block;
+                width: 33px;
+                height: 4px;
+                border-radius: 20px;
+                background-color: #fff;
+
+                & + span {
+                    margin-top: 6px;
+                }
+
+                &:nth-child(2) {
+                    width: 25px;
+                }
+            }
+        }
+    }
+
+    &-extra {
+        position: fixed;
+        z-index: 99;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: auto;
+        opacity: 0.95;
+        font-weight: 500;
+        @include flexBox(bothSides);
+        background-color: $color-main;
+
+        &__list {
+            --spaceHeader: 58px;
+            width: calc(100% - 127px - var(--spaceHeader));
+            padding: 6px 40px 0 0;
+            @include flexBox(bothSides);
+            justify-content: space-between;
+
+            @include responsive_bigLow {
+                --spaceHeader: 40px;
+                padding: 6px 26px 0 0;
+            }
+
+            @include responsive_fit {
+                --spaceHeader: 18px;
+                padding: 6px 22px 0 0;
+            }
+
+            @include responsive_fit {
+                --spaceHeader: 0px;
+            }
+        }
+
+        &__item {
+            font-size: 18px;
+            text-transform: uppercase;
+            color: #fff;
+
+            @include responsive_bigLow {
+                font-size: 16px;
+            }
+
+            @include responsive_fit {
+                font-size: 15px;
+            }
+
+            @include responsive_fitLow {
+                font-size: 14px;
+            }
+
+            @include responsive_HD {
+                font-size: 13px;
+            }
+
+            @include responsive_pcLower {
+                font-size: 10px;
+            }
+
+            &:hover {
+                color: #fff;
+            }
+        }
+
+        &__logo {
+            position: relative;
+            padding: 5px 41px 6px 28px;
+
+            @include responsive_bigLow {
+                padding: 5px 40px 6px 16px;
+            }
+
+            @include responsive_fitLow {
+                padding: 4px 40px 5px 16px;
+            }
+
+            & > img {
+                width: 58px;
+
+                @include responsive_fitLow {
+                    width: 50px;
+                }
+            }
+
+            &::after {
+                position: absolute;
+                content: "";
+                z-index: -1;
+                left: 0;
+                top: 0;
+
+                width: 100%;
+                height: 100%;
+
+                background-size: cover;
+                background-position: right bottom;
+                background-repeat: no-repeat;
+                background-image: $header-logo;
+            }
+        }
+    }
+
+    &-offcanvas {
+        background-image: $header-bg-offcanvas;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position-x: right;
+        background-position-y: top;
+
+        width: 430px;
+
+        .offcanvas {
+            &-body {
+                padding: 45px;
+            }
+
+            &-header {
+                @include flexBox(hor);
+                justify-content: right;
+                padding: 45px 15px 0;
+            }
+        }
+
+        .btn-close {
+            background: none;
+            opacity: 1;
+            padding: 0;
+            width: 48px;
+            height: 48px;
+        }
+    }
+
+    &-flag {
+        &__list {
+            @include flexBox(hor);
+            margin-bottom: 50px;
+        }
+
+        &__item {
+            padding: 0 30px;
+            border-right: 2px solid $color-main;
+            height: 29px;
+            @include flexBox(both);
+
+            &:first-child {
+                padding-left: 0;
+            }
+
+            &:last-child {
+                padding-right: 0;
+                border-right: 0;
+            }
+        }
+    }
+
+    &-menu {
+        &__list {
+            margin-bottom: 50px;
+        }
+
+        &__item {
+            & + & {
+                margin-top: 25px;
+            }
+
+            &.active {
+                .header-menu__link {
+                    color: $color-main;
+                    font-weight: 900;
+                }
+            }
+        }
+
+        &__link {
+            color: #575757;
+            font-size: 17px;
+            font-weight: 700;
+            line-height: normal;
+            text-transform: uppercase;
+            padding: 0;
+            background-color: transparent;
+
+            &.accordion-button:not(.collapsed) {
+                background-color: transparent;
+                color: $color-main;
+                box-shadow: none;
+                font-weight: 900;
+            }
+
+            &.collapsed {
+                color: #575757;
+            }
+
+            &::after {
+                display: none;
+            }
+        }
+    }
+
+    &-sub {
+        margin-top: 18px;
+
+        &__item {
+            & + & {
+                margin-top: 6px;
+            }
+        }
+
+        &__link {
+            color: $color-main;
+            text-transform: uppercase;
+            font-size: 17px;
+            font-weight: 600;
+        }
+    }
+
+    &-social {
+        &__list {
+            @include flexBox(bothSides);
+        }
+    }
+}

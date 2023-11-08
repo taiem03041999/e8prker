@@ -1,0 +1,152 @@
+.social {
+    margin-top: 95px;
+
+    &-header {
+        @include flexBox(hor);
+        flex-direction: column;
+
+        &__top,
+        &__bottom {
+            font-size: 40px;
+            color: #fff;
+            font-style: italic;
+            font-weight: 900;
+            text-transform: uppercase;
+            display: inline-block;
+            line-height: 1;
+        }
+
+        &__top {
+            position: relative;
+            margin-right: 332px;
+            padding: 10px 24px 4px 200px;
+            background: linear-gradient(
+                90deg,
+                rgba(255, 255, 255, 0) 0%,
+                rgba(51, 169, 52, 0.210697) 26%,
+                rgba(0, 147, 1, 0.882966) 70%,
+                #009301 100%
+            );
+
+            &::after {
+                position: absolute;
+                content: "";
+                right: 0;
+                top: 0;
+                height: 100%;
+
+                border-bottom: 54px solid #fff;
+                border-left: 14px solid transparent;
+            }
+        }
+
+        &__bottom {
+            position: relative;
+            margin-top: 4px;
+            padding: 10px 120px 4px 42px;
+            margin-left: 126px;
+            background: linear-gradient(
+                265deg,
+                rgba(255, 255, 255, 0) 0%,
+                rgba(51, 169, 52, 0.21069677871148462) 18%,
+                rgba(0, 147, 1, 0.9221813725490196) 50%,
+                rgba(0, 147, 1, 1) 100%
+            );
+
+            &::after {
+                position: absolute;
+                content: "";
+                left: 0;
+                top: 0;
+                height: 100%;
+
+                border-top: 54px solid #fff;
+                border-right: 14px solid transparent;
+            }
+        }
+    }
+
+    &-desc {
+        position: relative;
+        font-size: 20px;
+        font-style: italic;
+        text-align: center;
+
+        color: $color-sub;
+        line-height: 1.2;
+        margin-top: 28px;
+        padding-bottom: 19px;
+
+        & > p {
+            font-weight: 900;
+
+            &:first-child {
+                font-weight: 600;
+            }
+        }
+
+        &::after {
+            position: absolute;
+            content: "";
+            bottom: 0;
+            left: 50%;
+
+            width: 295px;
+            height: 1px;
+            transform: translateX(-50%);
+            background-color: $color-main;
+        }
+    }
+
+    &-slide {
+        margin-top: 36px;
+    }
+
+    &-item {
+        &__logo {
+            margin-bottom: 8px;
+            height: 84px;
+
+            & > img {
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+
+        &__img {
+            overflow: hidden;
+            border-radius: 40px;
+            @include imgPT(62%);
+        }
+
+        &__title {
+            color: $color-sub;
+            font-size: 24px;
+            font-weight: 700;
+            margin-top: 20px;
+            @include lineDot(2);
+
+            & > a {
+                color: $color-sub;
+            }
+
+            @include responsive_fitLow {
+                font-size: 20px;
+                margin-top: 14px;
+            }
+        }
+
+        &__desc {
+            font-family: $font-sub;
+            font-size: 18px;
+            font-weight: 400;
+            margin-top: 12px;
+            line-height: 1.3;
+            @include lineDot(4);
+
+            @include responsive_fitLow {
+                font-size: 16px;
+            }
+        }
+    }
+}

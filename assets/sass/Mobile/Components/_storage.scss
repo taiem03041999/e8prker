@@ -1,0 +1,349 @@
+.storage {
+    margin-top: 25px;
+
+    &-header {
+        text-align: center;
+
+        &__sub,
+        &__title {
+            color: $color-main;
+            line-height: 1.1;
+        }
+
+        &__title {
+            text-transform: uppercase;
+            font-size: 69px;
+            font-weight: 900;
+
+            @include responsive_small {
+                font-size: 60px;
+            }
+
+            &.special {
+                font-size: 38px;
+            }
+        }
+
+        &__name {
+            font-size: 26px;
+            color: $text-main;
+
+            @include responsive_small {
+                font-size: 22px;
+            }
+        }
+
+        &__sub {
+            display: inline-block;
+            font-size: 28px;
+        }
+
+        &__desc {
+            margin-top: 25px;
+            font-size: 15px;
+            color: #000;
+        }
+
+        &__text {
+            margin: 0 auto;
+            display: block;
+            max-width: 100%;
+            line-height: 1.3;
+
+            &:last-child {
+                & > span {
+                    line-height: 1.6;
+                    font-size: 20px;
+                }
+            }
+
+            & > span {
+                font-size: 20px;
+                font-weight: 700;
+                color: $color-main;
+            }
+        }
+    }
+
+    &-article {
+        padding: 0px 10px 0;
+
+        &__info {
+            margin-top: 20px;
+        }
+
+        &__title {
+            font-weight: 400;
+            font-size: 41px;
+            line-height: 1.1;
+            color: $color-main;
+
+            @include responsive_small {
+                font-size: 32px;
+            }
+
+            & > span {
+                margin-top: 8px;
+                display: block;
+                font-size: 65px;
+                font-weight: 900;
+
+                @include responsive_small {
+                    font-size: 56px;
+                    margin-top: 6px;
+                }
+            }
+        }
+
+        &__desc {
+            text-align: justify;
+            line-height: 1.4;
+            margin-top: 14px;
+        }
+    }
+
+    &-slide {
+        &__list {
+            margin-top: 35px;
+        }
+
+        &__item {
+            text-align: center;
+
+            & + & {
+                margin-top: 16px;
+            }
+        }
+
+        &__text {
+            font-weight: 500;
+            font-size: 21px;
+            color: $color-main;
+        }
+    }
+
+    &-detail {
+        position: relative;
+        padding-bottom: 42px;
+
+        &__cover {
+            margin-top: 35px;
+            font-family: $font-sub;
+            color: $text-main;
+            text-align: justify;
+            font-size: 15px;
+
+            height: 150px;
+            overflow: hidden;
+            transition: max-height 0.5s linear;
+        }
+
+        &__sub {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+
+            height: 70px;
+            width: 100%;
+            @include flexBox(bottom);
+            justify-content: center;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0) -33.96%, #fff 33.96%);
+            transition: all 0.6s linear;
+            display: none;
+
+            &.active {
+                bottom: 0;
+                background: transparent;
+                transition: all 0.2s linear;
+
+                .btn {
+                    &-short {
+                        display: flex;
+                    }
+
+                    &-more {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        &__btn {
+            color: $color-main;
+            font-size: 16px;
+            border: 0;
+            background-color: transparent;
+            @include flexBox(hor);
+            transition: all 0.6s linear;
+
+            &.btn {
+                &-short {
+                    display: none;
+                }
+            }
+        }
+
+        &__icon {
+            width: 17px;
+            height: 17px;
+            margin-left: 10px;
+            border-radius: 50%;
+            background-color: $color-main;
+            @include flexBox(both);
+        }
+    }
+
+    &-advise__btn,
+    &-info__store {
+        height: 110px;
+        @include flexBox(both);
+        flex-direction: column;
+    }
+
+    &-info {
+        width: 100%;
+
+        &__store {
+            padding: 20px 20px;
+            border-radius: 18px;
+            background: #dcffdd;
+        }
+
+        &__phone,
+        &__text,
+        &__desc {
+            font-family: $font-sub;
+            font-size: 16px;
+        }
+
+        &__desc {
+            margin-top: 34px;
+            max-width: 100%;
+            text-align: center;
+
+            & > p + p {
+                margin-top: 8px;
+            }
+        }
+
+        &__address {
+            color: $text-main;
+            font-family: $font-sub;
+            font-size: 22px;
+
+            height: 45px;
+            @include flexBox(hor);
+            overflow: hidden;
+
+            @include responsive_small {
+                font-size: 18px;
+            }
+
+            & > img {
+                margin-left: 16px;
+                width: 100%;
+                max-width: 185px;
+
+                @include responsive_small {
+                    margin-left: 14px;
+                }
+            }
+        }
+
+        &__phone {
+            margin-top: 16px;
+
+            & > span {
+                display: block;
+                color: $color-red;
+                font-weight: 700;
+                font-size: 15px;
+            }
+        }
+
+        &__text {
+            margin-top: 8px;
+            font-size: 15px;
+            line-height: 1.4;
+            text-align: center;
+
+            @include responsive_small {
+                margin: 0 auto;
+                max-width: 90%;
+                margin-top: 2px;
+            }
+        }
+    }
+
+    &-advise {
+        margin: 24px auto 0;
+        width: 100%;
+
+        &__cover {
+            margin-top: 18px;
+        }
+
+        &__header {
+            color: $text-main;
+            font-family: $font-sub;
+            font-size: 19px;
+
+            @include responsive_small {
+                font-size: 16px;
+            }
+
+            & > span {
+                font-family: $font-main;
+                color: $color-main;
+                font-weight: 900;
+                font-size: 34px;
+            }
+        }
+
+        &__btn {
+            color: #fff;
+            border-radius: 18px;
+            background: #f00;
+            padding: 22px 17px;
+            @include flexBox(both);
+            flex-direction: column;
+            margin-top: 40px;
+        }
+
+        &__name {
+            @include flexBox(hor);
+
+            & > span {
+                margin-left: 20px;
+                font-size: 24px;
+                font-weight: 900;
+
+                text-transform: uppercase;
+                text-align: center;
+                color: #fff;
+                line-height: normal;
+            }
+        }
+
+        &__text {
+            margin-top: 10px;
+            font-size: 14px;
+            font-weight: 500;
+            font-family: $font-sub;
+            text-align: center;
+
+            @include responsive_small {
+                max-width: 64%;
+                margin: 6px auto 0;
+            }
+        }
+
+        &__commit {
+            margin-top: 10px;
+            color: $color-main;
+            font-size: 22px;
+            font-weight: 700;
+            text-align: center;
+        }
+    }
+}

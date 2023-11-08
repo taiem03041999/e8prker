@@ -1,0 +1,207 @@
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 99;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        height: 100%;
+        width: 180px;
+        background-image: $header-before;
+        background-repeat: no-repeat;
+        background-position-x: right;
+        background-size: cover;
+        z-index: -2;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 160px;
+
+        height: 100%;
+        width: calc(100% - 160px);
+        background: linear-gradient(180deg, #009301 -50%, rgba(0, 147, 1, 0) 95%);
+        clip-path: polygon(5% 0, 100% 0, 100% 100%, 0% 100%);
+        z-index: -3;
+    }
+
+    &.special {
+        opacity: 0.95;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+        &::before {
+            background-image: $header-before-special;
+            background-size: cover;
+            background-position-x: right;
+        }
+
+        &::after {
+            left: 0;
+            width: 100%;
+            background: $color-main;
+            clip-path: none;
+        }
+    }
+
+    &-wrapper {
+        padding: 14px 3px;
+        @include flexBox(bothSides);
+
+        @include responsive_small {
+            padding: 12px 3px;
+        }
+    }
+
+    &-nav {
+        @include flexBox(hor);
+
+        &__menu {
+            margin-left: 38px;
+            @include flexBox(hor);
+            flex-direction: column;
+            align-items: flex-end;
+
+            & > span {
+                display: block;
+                width: 33px;
+                height: 4px;
+                border-radius: 20px;
+                background-color: #fff;
+
+                & + span {
+                    margin-top: 6px;
+                }
+
+                &:nth-child(2) {
+                    width: 25px;
+                }
+            }
+        }
+    }
+
+    &-offcanvas {
+        width: 100%;
+        max-width: 430px;
+
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: right top;
+        background-image: $header-bg-offcanvas;
+
+        .offcanvas {
+            &-body {
+                padding: 45px;
+            }
+
+            &-header {
+                @include flexBox(hor);
+                justify-content: right;
+                padding: 32px 20px 0;
+            }
+        }
+
+        .btn-close {
+            background: none;
+            opacity: 1;
+            padding: 0;
+            width: 48px;
+            height: 48px;
+        }
+    }
+
+    &-flag {
+        &__list {
+            @include flexBox(hor);
+            margin-bottom: 50px;
+        }
+
+        &__item {
+            padding: 0 30px;
+            border-right: 2px solid $color-main;
+            height: 29px;
+            @include flexBox(both);
+
+            &:first-child {
+                padding-left: 0;
+            }
+
+            &:last-child {
+                padding-right: 0;
+                border-right: 0;
+            }
+        }
+    }
+
+    &-menu {
+        &__list {
+            margin-bottom: 50px;
+        }
+
+        &__item {
+            & + & {
+                margin-top: 25px;
+            }
+
+            &.active {
+                .header-menu__link {
+                    color: $color-main;
+                    font-weight: 900;
+                }
+            }
+        }
+
+        &__link {
+            color: #575757;
+            font-size: 17px;
+            font-weight: 700;
+            line-height: normal;
+            text-transform: uppercase;
+            padding: 0;
+            background-color: transparent;
+
+            &.accordion-button:not(.collapsed) {
+                background-color: transparent;
+                color: $color-main;
+                box-shadow: none;
+                font-weight: 900;
+            }
+
+            &.collapsed {
+                color: #575757;
+            }
+
+            &::after {
+                display: none;
+            }
+        }
+    }
+
+    &-sub {
+        margin-top: 18px;
+
+        &__item {
+            & + & {
+                margin-top: 6px;
+            }
+        }
+
+        &__link {
+            color: $color-main;
+            text-transform: uppercase;
+            font-size: 17px;
+            font-weight: 600;
+        }
+    }
+
+    &-social {
+        &__list {
+            @include flexBox(bothSides);
+        }
+    }
+}

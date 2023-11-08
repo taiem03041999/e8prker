@@ -1,0 +1,109 @@
+.custom {
+    &-sub {
+        &__btn {
+            padding: 8px 25px;
+            border-radius: 7px;
+            border: 1px solid $color-yellow;
+            font-weight: 500;
+            margin-left: 20px;
+
+            @include flexBox(both);
+            font-size: 16px;
+            color: $color-yellow;
+            background-color: rgba($color: $color-yellow, $alpha: 0.1);
+
+            @include responsive_bothTM {
+                width: 100%;
+                margin: 20px 0 0;
+            }
+
+            & + & {
+                @include responsive_table {
+                    margin-left: 20px;
+                }
+            }
+
+            &.special {
+                color: #fff;
+                background-color: $color-main;
+                border-color: $color-main;
+            }
+        }
+    }
+
+    &-cover {
+        &__list {
+            margin-bottom: 30px;
+        }
+
+        &__item {
+            @include flexBox(top);
+            padding-bottom: 30px;
+            position: relative;
+
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                right: 0;
+
+                width: 92%;
+                height: 1px;
+                background-color: rgba($color: $color-desc, $alpha: 0.1);
+
+                @include responsive_mobile {
+                    width: 100%;
+                }
+            }
+
+            &:last-child {
+                &::after {
+                    display: none;
+                }
+            }
+
+            & + & {
+                margin-top: 30px;
+            }
+
+            @include responsive_mobile {
+                flex-direction: column;
+            }
+        }
+
+        &__desc {
+            @include flexBox(top);
+            margin-right: 30px;
+
+            @include responsive_mobile {
+                flex-direction: column;
+            }
+        }
+
+        &__time {
+            @include responsive_mobile {
+                margin-top: 15px;
+            }
+        }
+
+        &__text {
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+
+        &__box {
+            @include flexBox(top);
+
+            & > svg {
+                min-width: 20px;
+                margin-right: 5px;
+            }
+        }
+
+        &__sub {
+            font-size: 14px;
+            color: rgba($color: $color-desc, $alpha: 0.75);
+        }
+    }
+}
