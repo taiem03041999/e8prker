@@ -1,0 +1,1 @@
+const r=new IntersectionObserver(e=>{e.forEach(t=>{t.isIntersecting?t.target.classList.add("entered"):t.target.classList.remove("entered")})},{rootMargin:"100% 0% -20% 0%",threshold:1}),s=document.getElementById("highlight-title").children;for(let e=0;e<s.length;e++)r.observe(s[e]);

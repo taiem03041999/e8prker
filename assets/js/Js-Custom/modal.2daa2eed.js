@@ -1,0 +1,1 @@
+const s=document.getElementsByClassName("modal"),l=document.getElementsByClassName("open-modal"),a=document.getElementsByClassName("close-modal");[...l].forEach((e,o)=>{e.addEventListener("click",()=>{s[o].showModal()})});[...a].forEach((e,o)=>{e.addEventListener("click",()=>{s[o].close()})});

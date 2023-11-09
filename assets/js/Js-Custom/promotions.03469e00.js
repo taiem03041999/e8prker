@@ -1,0 +1,1 @@
+const e=document.getElementById("sticky"),c=new IntersectionObserver(s=>{s.forEach(t=>{t.isIntersecting?e.classList.add("lg:bg-zinc-500/30"):e.classList.remove("lg:bg-zinc-500/30")})},{threshold:1});c.observe(e);

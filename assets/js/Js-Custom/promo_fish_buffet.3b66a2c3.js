@@ -1,0 +1,1 @@
+const t=document.getElementsByClassName("revealable");for(let e=0;e<t.length;e++){const l=t[e];l.addEventListener("click",()=>{l.getElementsByClassName("revealable-overlay")[0].remove(),l.classList.remove("revealable")},{once:!0})}
