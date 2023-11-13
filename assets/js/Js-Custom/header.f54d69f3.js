@@ -1,4 +1,3 @@
-import { _ as d } from "./preload-helper.892902a4.js";
 const i = document.querySelector("header");
 document.addEventListener("scroll", (e) => {
   let t = window.scrollY;
@@ -6,27 +5,15 @@ document.addEventListener("scroll", (e) => {
 });
 const u = document.getElementById("desktop-searchbar"),
   p = document.getElementById("desktop-searchbar-open"),
-  v = document.getElementById("desktop-searchbar-close"),
-  L = document.getElementById("desktop-search-node");
-let l;
-const f = async () => {
-    l = (
-      await d(
-        () => import("./client.fccac619.js").then((a) => a.c),
-        ["assets/client.fccac619.js", "assets/index.44a37fc8.js", "assets/_commonjsHelpers.f037b798.js"]
-      )
-    ).createRoot(L);
-    const { default: t } = await d(
-      () => import("./index.8523c4ae.js"),
-      ["assets/index.8523c4ae.js", "assets/index.44a37fc8.js", "assets/_commonjsHelpers.f037b798.js", "assets/index.37598ab4.js"]
-    );
-    l.render(t), u.classList.add("expanded");
-  },
-  k = () => {
-    l.unmount(), u.classList.remove("expanded");
-  };
-p.addEventListener("click", f);
-v.addEventListener("click", k);
+  v = document.getElementById("desktop-searchbar-close");
+
+p.addEventListener("click", () => {
+  u.classList.add("expanded");
+});
+v.addEventListener("click", () => {
+  u.classList.remove("expanded");
+});
+
 const b = document.getElementById("navigation-header"),
   E = document.getElementById("mobile-header"),
   I = document.getElementById("header-button-mobile-close-btn"),
@@ -39,24 +26,11 @@ const b = document.getElementById("navigation-header"),
     w.forEach((e) => {
       e.style.zIndex = "0";
     });
-  },
-  x = async () => {
-    const t = (
-        await d(
-          () => import("./client.fccac619.js").then((g) => g.c),
-          ["assets/client.fccac619.js", "assets/index.44a37fc8.js", "assets/_commonjsHelpers.f037b798.js"]
-        )
-      ).createRoot(document.getElementById("mobile-search-node")),
-      { default: a } = await d(
-        () => import("./index.8523c4ae.js"),
-        ["assets/index.8523c4ae.js", "assets/index.44a37fc8.js", "assets/_commonjsHelpers.f037b798.js", "assets/index.37598ab4.js"]
-      );
-    t.render(a);
   };
 y.addEventListener(
   "click",
   () => {
-    x();
+    // x();
   },
   { once: !0 }
 );
