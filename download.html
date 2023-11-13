@@ -45,7 +45,6 @@
                             <button type="button" id="header-button-locale-notification-close"
                                 class="inline-block rounded-md p-2 hover:bg-zinc-800 focus:outline-none focus:ring-2 focus:ring-white">
                                 <span class="sr-only">Dismiss</span>
-
                                 <svg class="h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none"
                                     viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12">
@@ -174,7 +173,22 @@
                                     </svg>
                                 </span>
 
-                                <div id="desktop-search-node" class="w-full"></div>
+                                <div id="desktop-search-node" class="w-full">
+                                    <div class="z-50">
+                                        <div class="ais-SearchBox">
+                                            <form novalidate="" class="ais-SearchBox-form" action="" role="search">
+                                                <input type="search" placeholder="Search Natural8..." autocomplete="off"
+                                                    autocorrect="off" autocapitalize="off" spellcheck="false"
+                                                    required="" maxlength="512" class="ais-SearchBox-input"
+                                                    value=""><button type="submit" title="Submit your search query."
+                                                    class="ais-SearchBox-submit"></button><button type="reset"
+                                                    title="Clear the search query." class="ais-SearchBox-reset"
+                                                    hidden=""><img
+                                                        src="data:image/webp;base64,UklGRlICAABXRUJQVlA4WAoAAAAQAAAAYwAAYwAAQUxQSM8AAAABgFXbdtzmQngQBEVQzKBiUDGQGNgMbAaGoDB4EB4Ez2OuftuImABc9KFXm77cSh897pdfm2hq6+6RNJFt3Q0/NtHV5lKaKKdzMk6ki5z5TLTHE2king6aiXrYccrNZNNN5BMAN9EXoOMXAeVn8FMFfaxBGGowlBqo1cCmf///3dBqYFqDMtRgCDWIvgYexk+ByK8FhJ8DkNm1ACDGTd0GgVuD/cws43jk9cFJKaxGOQNkThlXG+VjAdddxyYLbnWd8rAouN/Hvti3mfbB4yIAVlA4IFwBAAAQDACdASpkAGQAPpFEn0olpCMhqdM48LASCWkAC+m/gC8Bvl1Qb+ZJG8S5srY5I+lCcsYw9NsXVdcLjOUaaINUbpdo8n5Ao8ghOfZrxbxfvyd57XsBkjm/eOlSrAtG/ETwnSYQJj6GvwAA/ukQjfkO///58QSWeWV0x+uXG9fjoO8YSCD0vn9/1cUETaJE22rI8TZLP2EiFjLUAFoUQIZVXwz68QMhVozCyiTy9/u1MvGpXH4fvmJgXr+iGq4APeGQbPOHyvw4L3+RoPlMpX4uzdQj6QwAc7mBV8y0kjrWb91xpormERvnplCRz2D7xggYKEbkmwyMEHayjxt8qKtitAKNMEFW7vTqyG1u0OALFk3irk4iQz7kKgPfEX/chUB6h58p87pK/cETLtY6ZFrxAdeUm829wwRAk3aa7F/OW05KfUpuwsP/pfBu5rTj4BG/Ir//58Qhf3Z8AAA="
+                                                        alt=""></button></form>
+                                        </div>
+                                    </div>
+                                </div>
 
                                 <span id="desktop-searchbar-close">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none"
@@ -499,7 +513,24 @@
                                                             d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
                                                     </svg>
                                                 </span>
-                                                <div id="mobile-search-node" class="w-full"></div>
+                                                <div id="mobile-search-node" class="w-full">
+                                                    <div class="z-50">
+                                                        <div class="ais-SearchBox">
+                                                            <form novalidate="" class="ais-SearchBox-form" action=""
+                                                                role="search"><input type="search"
+                                                                    placeholder="Search Natural8..." autocomplete="off"
+                                                                    autocorrect="off" autocapitalize="off"
+                                                                    spellcheck="false" required="" maxlength="512"
+                                                                    class="ais-SearchBox-input" value=""><button
+                                                                    type="submit" title="Submit your search query."
+                                                                    class="ais-SearchBox-submit"></button><button
+                                                                    type="reset" title="Clear the search query."
+                                                                    class="ais-SearchBox-reset" hidden=""><img
+                                                                        src="data:image/webp;base64,UklGRlICAABXRUJQVlA4WAoAAAAQAAAAYwAAYwAAQUxQSM8AAAABgFXbdtzmQngQBEVQzKBiUDGQGNgMbAaGoDB4EB4Ez2OuftuImABc9KFXm77cSh897pdfm2hq6+6RNJFt3Q0/NtHV5lKaKKdzMk6ki5z5TLTHE2king6aiXrYccrNZNNN5BMAN9EXoOMXAeVn8FMFfaxBGGowlBqo1cCmf///3dBqYFqDMtRgCDWIvgYexk+ByK8FhJ8DkNm1ACDGTd0GgVuD/cws43jk9cFJKaxGOQNkThlXG+VjAdddxyYLbnWd8rAouN/Hvti3mfbB4yIAVlA4IFwBAAAQDACdASpkAGQAPpFEn0olpCMhqdM48LASCWkAC+m/gC8Bvl1Qb+ZJG8S5srY5I+lCcsYw9NsXVdcLjOUaaINUbpdo8n5Ao8ghOfZrxbxfvyd57XsBkjm/eOlSrAtG/ETwnSYQJj6GvwAA/ukQjfkO///58QSWeWV0x+uXG9fjoO8YSCD0vn9/1cUETaJE22rI8TZLP2EiFjLUAFoUQIZVXwz68QMhVozCyiTy9/u1MvGpXH4fvmJgXr+iGq4APeGQbPOHyvw4L3+RoPlMpX4uzdQj6QwAc7mBV8y0kjrWb91xpormERvnplCRz2D7xggYKEbkmwyMEHayjxt8qKtitAKNMEFW7vTqyG1u0OALFk3irk4iQz7kKgPfEX/chUB6h58p87pK/cETLtY6ZFrxAdeUm829wwRAk3aa7F/OW05KfUpuwsP/pfBu5rTj4BG/Ir//58Qhf3Z8AAA="
+                                                                        alt=""></button></form>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="overflow-y-scroll" style="max-height: calc(100% - 80px)">
@@ -685,6 +716,7 @@
                         </li>
                     </ol>
                 </nav>
+
                 <div class="grid grid-cols-1 md:grid-cols-2">
                     <div class="w-full md:w-11/12">
                         <h1 class="text-2xl md:text-3xl mb-3">
@@ -1000,6 +1032,7 @@ c0-9.517-3.322-17.552-9.969-24.094C493.888,182.415,485.798,179.141,476.275,179.1
                                     </li>
                                 </ul>
                             </div>
+
                             <picture>
                                 <img src="./assets/images/banner-large.4386d2fd.webp" alt="" class="w-full md:w-10/12"
                                     loading="eager" fetchpriority="auto">
@@ -1009,9 +1042,11 @@ c0-9.517-3.322-17.552-9.969-24.094C493.888,182.415,485.798,179.141,476.275,179.1
                 </div>
                 <details class="my-10">
                     <summary>
-                        <p class="inline-block cursor-pointer text-gray-400">Đọc thêm về Yêu cầu
-                            hệ thống</p>
+                        <p class="inline-block cursor-pointer text-gray-400">
+                            Đọc thêm về Yêu cầu hệ thống
+                        </p>
                     </summary>
+
                     <div class="grid grid-cols-2 md:grid-cols-4 mt-10">
                         <div class="rounded p-4 bg-zinc-600/25">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewbox="0 0 512 512"
@@ -1041,18 +1076,28 @@ c0-9.517-3.322-17.552-9.969-24.094C493.888,182.415,485.798,179.141,476.275,179.1
                                     </g>
                                 </g>
                             </svg>
+
                             <h5 class="mt-4">Windows</h5>
+
                             <ul class="mt-4 list-disc list-outside pl-2 gap-y-5 opacity-80">
-                                <li class="mb-3 text-xs">Windows 8 (khuyên dùng Windows
-                                    10)</li>
-                                <li class="mb-3 text-xs">Bộ xử lý 3 GHz (khuyên dùng
-                                    Intel Core i3 trở lên)</li>
-                                <li class="mb-3 text-xs">RAM 2 GB (khuyến nghị 4 GB trở
-                                    lên)</li>
-                                <li class="text-xs">1 GB dung lượng đĩa trống (khuyến
-                                    nghị 10 GB trở lên)</li>
+                                <li class="mb-3 text-xs">
+                                    Windows 8 (khuyên dùng Windows 10)
+                                </li>
+
+                                <li class="mb-3 text-xs">
+                                    Bộ xử lý 3 GHz (khuyên dùng Intel Core i3 trở lên)
+                                </li>
+
+                                <li class="mb-3 text-xs">
+                                    RAM 2 GB (khuyến nghị 4 GB trở lên)
+                                </li>
+
+                                <li class="text-xs">
+                                    1 GB dung lượng đĩa trống (khuyến nghị 10 GB trở lên)
+                                </li>
                             </ul>
                         </div>
+
                         <div class="rounded p-4 false">
                             <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512"
                                 fill="currentColor">
@@ -1072,15 +1117,20 @@ C387.852,342.624,373.932,219.168,459.852,171.776z"></path>
                                     </g>
                                 </g>
                             </svg>
+
                             <h5 class="mt-4">Hệ điều hành Mac</h5>
+
                             <ul class="mt-4 list-disc list-inside opacity-80">
                                 <li class="mb-3 text-xs">OS X 10.10 trở lên</li>
+
                                 <li class="mb-3 text-xs">Bộ xử lý 3 GHz hoặc nhanh hơn
                                 </li>
+
                                 <li class="text-xs">RAM 2 GB (khuyến nghị 4 GB trở lên)
                                 </li>
                             </ul>
                         </div>
+
                         <div class="rounded p-4 false">
                             <svg class="h-6 w-6" viewbox="0 0 553.048 553.048" xmlns="http://www.w3.org/2000/svg"
                                 fill="currentColor">
@@ -1113,16 +1163,21 @@ c0-9.517-3.322-17.552-9.969-24.094C493.888,182.415,485.798,179.141,476.275,179.1
                                     </g>
                                 </g>
                             </svg>
+
                             <h5 class="mt-4">Android</h5>
+
                             <ul class="mt-4 list-disc list-inside opacity-80">
                                 <li class="mb-3 text-xs">Hệ điều hành Android 6.0.xx
                                     Marshmellow (khuyên dùng 10.0 trở lên)</li>
+
                                 <li class="mb-3 text-xs">RAM 2 GB (khuyến nghị 3 GB trở
                                     lên)</li>
+
                                 <li class="text-xs">250 MB dung lượng đĩa trống (khuyến
                                     nghị 1 GB trở lên)</li>
                             </ul>
                         </div>
+
                         <div class="rounded p-4 false">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewbox="0 0 512 512"
                                 fill="currentColor">
@@ -1142,13 +1197,17 @@ C387.852,342.624,373.932,219.168,459.852,171.776z"></path>
                                     </g>
                                 </g>
                             </svg>
+
                             <h5 class="mt-4">iOS</h5>
+
                             <ul class="mt-4 list-disc list-inside opacity-80">
                                 <li class="mb-3 text-xs">iPad Air 2 / iPad Mini 4
                                     (khuyên dùng iPad Air 3 / iPad Pro 2 / iPad Mini
                                     5 trở lên)</li>
+
                                 <li class="mb-3 text-xs">Khuyến nghị RAM 3 GB trở lên
                                 </li>
+
                                 <li class="text-xs">250 MB dung lượng đĩa trống (khuyến
                                     nghị 1 GB trở lên)</li>
                             </ul>
@@ -1159,21 +1218,27 @@ C387.852,342.624,373.932,219.168,459.852,171.776z"></path>
 
             <section class="container blob-cr-amber" id="why-us">
                 <h2 class="text-center max-w-2xl mx-auto">Vì Sao Nên Tải Phần Mềm Poker E8prker?</h2>
+
                 <div class="grid grid-cols-1 grid-flow-col grid-rows-6 sm:grid-cols-3 sm:grid-rows-5 gap-3 mt-8">
                     <div class="sm:row-span-3 bg-stone-600/30 rounded-lg p-4">
                         <div class="relative h-full flex">
                             <div
                                 class="peer absolute top-0 opacity-0 sm:opacity-100 sm:hover:opacity-0 h-full w-full z-10 transition-opacity duration-500">
-                                <h4 class="w-9/12 text-2xl">Phòng Poker Trực Tuyến Lớn
-                                    Nhất Châu Á</h4>
+                                <h4 class="w-9/12 text-2xl">
+                                    Phòng Poker Trực Tuyến Lớn Nhất Châu Á
+                                </h4>
+
                                 <picture>
                                     <img src="./assets/images/thunder-large.a3587d09.webp" alt=""
                                         class="absolute top-0 right-0" loading="lazy" fetchpriority="auto">
                                 </picture>
                             </div>
+
                             <div class="sm:opacity-0 peer-hover:opacity-100 transition-opacity duration-500">
-                                <h4 class="text-xl sm:hidden mb-4">Phòng Poker Trực
-                                    Tuyến Lớn Nhất Châu Á</h4>
+                                <h4 class="text-xl sm:hidden mb-4">
+                                    Phòng Poker Trực Tuyến Lớn Nhất Châu Á
+                                </h4>
+
                                 <p class="text-sm">E8prker cung cấp các trò chơi ăn
                                     tiền quen thuộc như <a href="#">trò chơi
                                         Texas Hold'em</a> , Pot Limit Omaha và
@@ -1183,30 +1248,37 @@ C387.852,342.624,373.932,219.168,459.852,171.776z"></path>
                                     nhau như Deepstacks và thậm chí cả Bounty
                                     Hunters và Turbos được người hâm mộ yêu thích
                                     thu hút hơn 80.000 người chơi poker đồng thời từ
-                                    khắp nơi trên thế giới!</p>
+                                    khắp nơi trên thế giới!
+                                </p>
                             </div>
                         </div>
                     </div>
+
                     <div class="sm:row-span-2 bg-stone-600/30 rounded-lg p-4">
                         <div class="relative h-full flex">
                             <div
                                 class="peer absolute top-0 opacity-0 sm:opacity-100 sm:hover:opacity-0 h-full w-full z-10 transition-opacity duration-500">
-                                <h4 class="w-9/12 text-2xl">Giải thưởng Poker lớn và
-                                    khuyến mãi không ngừng</h4>
+                                <h4 class="w-9/12 text-2xl">
+                                    Giải thưởng Poker lớn và khuyến mãi không ngừng
+                                </h4>
+
                                 <div class="absolute top-0 right-0 rounded-full bg-zinc-400/25 p-2">
-                                    <p class="text-white/50 font-extrabold text-3xl">
-                                        18</p>
+                                    <p class="text-white/50 font-extrabold text-3xl">18</p>
                                 </div>
                             </div>
+
                             <div class="sm:opacity-0 peer-hover:opacity-100 transition-opacity duration-500">
-                                <h4 class="text-xl sm:hidden mb-4">Giải thưởng Poker lớn
-                                    và khuyến mãi không ngừng</h4>
-                                <p class="text-sm">E8prker tự hào có một số giải đấu
-                                    poker trực tuyến tốt nhất với khoản đảm bảo
+                                <h4 class="text-xl sm:hidden mb-4">
+                                    Giải thưởng Poker lớn và khuyến mãi không ngừng
+                                </h4>
+
+                                <p class="text-sm">
+                                    E8prker tự hào có một số giải đấu poker trực tuyến tốt nhất với khoản đảm bảo
                                     khổng lồ lên đến 120.000.000 đô la mỗi tháng.
                                     Chúng tôi cũng nổi tiếng là người làm mọi thứ
                                     thêm gia vị với nhiều Bảng xếp hạng, Thử thách,
-                                    Quà tặng và thậm chí cả Freerolls.</p>
+                                    Quà tặng và thậm chí cả Freerolls.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -1214,12 +1286,16 @@ C387.852,342.624,373.932,219.168,459.852,171.776z"></path>
                         <div class="relative h-full flex">
                             <div
                                 class="peer absolute top-0 opacity-0 sm:opacity-100 sm:hover:opacity-0 h-full w-full z-10 transition-opacity duration-500">
-                                <h4 class="text-2xl"><strong class="highlight"> Tính
-                                        Năng </strong> Sáng Tạo</h4>
+                                <h4 class="text-2xl"><strong class="highlight">
+                                        Tính Năng </strong> Sáng Tạo
+                                </h4>
                             </div>
+
                             <div class="sm:opacity-0 peer-hover:opacity-100 transition-opacity duration-500">
-                                <h4 class="text-xl sm:hidden mb-4"><strong class="highlight"> Tính Năng </strong>
-                                    Sáng Tạo</h4>
+                                <h4 class="text-xl sm:hidden mb-4"><strong class="highlight">
+                                        Tính Năng </strong> Sáng Tạo
+                                </h4>
+
                                 <p class="text-sm">E8prker cung cấp các tính năng ứng
                                     dụng độc đáo và sáng tạo như Mua Bán Cổ Phần,
                                     Card Squeeze, HUD thông minh (HỤD poker tích hợp
@@ -1229,20 +1305,26 @@ C387.852,342.624,373.932,219.168,459.852,171.776z"></path>
                             </div>
                         </div>
                     </div>
+
                     <div class="sm:row-span-3 bg-stone-600/30 rounded-lg p-4">
                         <div class="relative h-full flex">
                             <div
                                 class="peer absolute top-0 opacity-0 sm:opacity-100 sm:hover:opacity-0 h-full w-full z-10 transition-opacity duration-500">
-                                <h4 class="text-2xl">An toàn & bảo mật với dịch vụ đẳng
-                                    cấp thế giới</h4>
+                                <h4 class="text-2xl">
+                                    An toàn & bảo mật với dịch vụ đẳng cấp thế giới
+                                </h4>
+
                                 <picture>
                                     <img src="./assets/images/shield-large.e0301aa4.webp" alt=""
                                         class="absolute bottom-0 right-0" loading="lazy" fetchpriority="auto">
                                 </picture>
                             </div>
+
                             <div class="sm:opacity-0 peer-hover:opacity-100 transition-opacity duration-500">
-                                <h4 class="text-xl sm:hidden mb-4">An toàn & bảo mật với
-                                    dịch vụ đẳng cấp thế giới</h4>
+                                <h4 class="text-xl sm:hidden mb-4">
+                                    An toàn & bảo mật với dịch vụ đẳng cấp thế giới
+                                </h4>
+
                                 <p class="text-sm">E8prker là phòng poker trực tuyến
                                     lớn nhất Châu Á, cung cấp <a href="#">tiền gửi tức thì </a> và
                                     rút tiền nhanh chóng. RNG của chúng tôi được
@@ -1252,18 +1334,22 @@ C387.852,342.624,373.932,219.168,459.852,171.776z"></path>
                             </div>
                         </div>
                     </div>
+
                     <div class="sm:row-span-3 bg-stone-600/30 rounded-lg p-4">
                         <div class="relative h-full flex">
                             <div
                                 class="peer absolute top-0 w- opacity-0 sm:opacity-100 sm:hover:opacity-0 h-full w-full z-10 transition-opacity duration-500">
-                                <h4 class="text-2xl">Được công nhận bởi <strong class="highlight"> các Đại sứ hàng đầu
-                                    </strong></h4>
+                                <h4 class="text-2xl">
+                                    Được công nhận bởi <strong class="highlight"> các Đại sứ hàng đầu </strong>
+                                </h4>
                             </div>
+
                             <div class="sm:opacity-0 peer-hover:opacity-100 transition-opacity duration-500">
                                 <h4 class="text-xl sm:hidden mb-4">
                                     Được công nhận bởi <strong class="highlight">
                                         các Đại sứ hàng đầu </strong>
                                 </h4>
+
                                 <p class="text-sm">
                                     E8prker được công nhận bởi những người chơi
                                     poker hàng đầu của cộng đồng poker trực tuyến và
@@ -1272,17 +1358,21 @@ C387.852,342.624,373.932,219.168,459.852,171.776z"></path>
                             </div>
                         </div>
                     </div>
+
                     <div class="sm:row-span-2 bg-stone-600/30 rounded-lg px-4 py-2">
                         <div class="relative h-full flex">
                             <div
                                 class="peer absolute top-0 opacity-0 sm:opacity-100 sm:hover:opacity-0 h-full w-full z-10 transition-opacity duration-500">
-                                <h4 class="w-9/12 text-2xl">Có sẵn trên tất cả các nền
-                                    tảng</h4>
+                                <h4 class="w-9/12 text-2xl">
+                                    Có sẵn trên tất cả các nền tảng
+                                </h4>
                             </div>
+
                             <div class="sm:opacity-0 peer-hover:opacity-100 transition-opacity duration-500">
                                 <h4 class="text-xl sm:hidden mb-4">
                                     Có sẵn trên tất cả các nền tảng
                                 </h4>
+
                                 <p class="text-sm">
                                     Ứng dụng E8prker được tối ưu hóa tối đa cho
                                     Windows, Mac, iOS và Android để bạn có thể chơi
@@ -1303,24 +1393,39 @@ C387.852,342.624,373.932,219.168,459.852,171.776z"></path>
                         <h2>Các điều khoản và điều kiện</h2>
                     </div>
                 </div>
+
                 <div class="col-span-1 lg:col-span-2">
                     <ol class="list-inside list-decimal text-zinc-300 grid gap-2">
-                        <li>Người chơi phải từ 18 tuổi trở lên để tham gia chương trình khuyến
-                            mãi này.</li>
-                        <li>E8prker có quyền điều tra bất kỳ người chơi nào bị nghi ngờ có hành
+                        <li>
+                            Người chơi phải từ 18 tuổi trở lên để tham gia chương trình khuyến
+                            mãi này.
+                        </li>
+
+                        <li>
+                            E8prker có quyền điều tra bất kỳ người chơi nào bị nghi ngờ có hành
                             vi gian lận và thực hiện bất kỳ hành động cần thiết nào. Trong
                             trường hợp chơi nhiều tài khoản, săn tiền thưởng hoặc chơi xấu,
                             E8prker có quyền tước bất kỳ số tiền thưởng nào đã được thanh
                             toán cùng với bất kỳ số dư tiền mặt còn lại nào mà không cần
-                            thông báo trước.</li>
-                        <li>E8prker có quyền hủy hoặc sửa đổi ưu đãi này bất cứ lúc nào mà
+                            thông báo trước.
+                        </li>
+
+                        <li>
+                            E8prker có quyền hủy hoặc sửa đổi ưu đãi này bất cứ lúc nào mà
                             không cần thông báo trước, theo quyết định duy nhất và tuyệt đối
-                            của mình.</li>
-                        <li>Khuyến mãi này tuân theo các <a href="#" target="_blank">điều
-                                khoản và điều kiện</a> của trang web E8prker.</li>
-                        <li>E8prker ủng hộ đánh bạc an toàn. Nếu bạn cảm thấy bạn có vấn đề về
+                            của mình.
+                        </li>
+
+                        <li>
+                            Khuyến mãi này tuân theo các <a href="#" target="_blank">điều
+                                khoản và điều kiện</a> của trang web E8prker.
+                        </li>
+
+                        <li>
+                            E8prker ủng hộ đánh bạc an toàn. Nếu bạn cảm thấy bạn có vấn đề về
                             đánh bạc trựng tuyến, hãy tìm kiếm thêm lời khuyên hoặc tư vấn
-                            tại <a href="#" target="_blank">www.begambleaware.org</a></li>
+                            tại <a href="#" target="_blank">www.begambleaware.org</a>
+                        </li>
                     </ol>
                 </div>
             </div>
@@ -1685,9 +1790,6 @@ C387.852,342.624,373.932,219.168,459.852,171.776z"></path>
 
 <script src="./assets/js/Js-Custom/download.4a1598c3.js" crossorigin="anonymous" type="module" defer="defer">
 </script>
-
-<link rel="modulepreload" href="./assets/js/Js-Custom/preload-helper.892902a4.js" as="script" crossorigin="anonymous"
-    fetchpriority="high" defer="defer">
 
 <script src="./assets/js/Js-Custom/locale_detected.a9492a68.js" crossorigin="anonymous" type="module"
     fetchpriority="high" defer="defer">
