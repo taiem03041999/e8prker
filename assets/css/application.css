@@ -36991,7 +36991,7 @@ div.table-rose-900.table-border th {
 }
 
 .from-pink-500 {
-    --tw-gradient-from: #ec4899;
+    --tw-gradient-from: #01c3cc;
     --tw-gradient-to: rgba(236, 72, 153, 0);
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to)
 }
@@ -37300,7 +37300,7 @@ div.table-rose-900.table-border th {
 }
 
 .to-purple-500 {
-    --tw-gradient-to: #a855f7
+    --tw-gradient-to: #01cc46;
 }
 
 .to-orange-600 {
@@ -38069,7 +38069,7 @@ div.table-rose-900.table-border th {
 
 .text-pink-500 {
     --tw-text-opacity: 1;
-    color: rgb(236 72 153/var(--tw-text-opacity))
+    color: rgb(1 204 70/var(--tw-text-opacity))
 }
 
 .text-zinc-300 {
@@ -40530,7 +40530,7 @@ summary.faq-summary::-webkit-details-marker {
 
 .prose-a\:text-pink-500 :is(:where(a):not(:where([class~=not-prose] *))) {
     --tw-text-opacity: 1;
-    color: rgb(236 72 153/var(--tw-text-opacity))
+    color: rgb(1 204 70/var(--tw-text-opacity));
 }
 
 .prose-blockquote\:ml-4 :is(:where(blockquote):not(:where([class~=not-prose] *))) {
@@ -40806,7 +40806,7 @@ summary.faq-summary::-webkit-details-marker {
 
 .hover\:text-pink-500:hover {
     --tw-text-opacity: 1;
-    color: rgb(236 72 153/var(--tw-text-opacity))
+    color: rgb(1 204 70/var(--tw-text-opacity))
 }
 
 .hover\:text-zinc-400:hover {
