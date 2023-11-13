@@ -1,1 +1,0 @@
-const l=r=>{if(!(typeof turnstile>"u"))return new Promise((n,i)=>{const t={sitekey:"0x4AAAAAAABPqzmj1aU9y5-7",retry:"never",callback:e=>n(e),"error-callback":e=>{console.error(e);try{window.awsRum&&window.awsRum.recordError(e)}catch{}i("Turnstile challenge failed. Please try again.")}};r&&(t.action=r),turnstile.render("#cf-turnstile",t)})};export{l as t};
