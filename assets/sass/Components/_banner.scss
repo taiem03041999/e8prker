@@ -1,0 +1,63 @@
+.banner {
+    padding-top: 80px;
+    padding-bottom: 0;
+
+    &-slider {
+        position: relative;
+        --width-slider: -50px;
+
+        .swiper {
+            &-button {
+                &-next,
+                &-prev {
+                    &::after {
+                        display: none;
+                    }
+
+                    @include responsive_bothTM {
+                        display: none;
+                    }
+                }
+
+                &-next {
+                    right: var(--width-slider);
+                }
+
+                &-prev {
+                    left: var(--width-slider);
+                }
+            }
+
+            &-scrollbar {
+                display: none;
+
+                @include responsive_bothTM {
+                    margin-top: 20px;
+                    position: relative;
+                    display: block;
+                    background: #232323;
+                }
+
+                &-drag {
+                    @include responsive_bothTM {
+                        background: #499513;
+                        height: 5px;
+                    }
+                }
+            }
+        }
+
+        a {
+            background-image: none !important;
+        }
+
+        &__item {
+            border-radius: 18px;
+            @include imgPT(57%);
+
+            @include responsive_bothTM {
+                border-radius: 8px;
+            }
+        }
+    }
+}

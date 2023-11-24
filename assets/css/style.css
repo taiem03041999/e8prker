@@ -66,3 +66,56 @@
       background-image: url("data:image/svg+xml,%3Csvg width='428' height='29' viewBox='0 0 428 29' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cellipse cx='218.5' cy='14.4432' rx='218.5' ry='13.8671' fill='url(%23paint0_radial_489_9935)' fill-opacity='0.64'/%3E%3Cdefs%3E%3CradialGradient id='paint0_radial_489_9935' cx='0' cy='0' r='1' gradientUnits='userSpaceOnUse' gradientTransform='translate(218.943 14.4432) rotate(91.8306) scale(13.8741 218.426)'%3E%3Cstop stop-color='%232C2C2C' stop-opacity='0.79'/%3E%3Cstop offset='0.778131' stop-color='%23000' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3C/svg%3E%0A");
       background-size: cover;
       background-repeat: no-repeat; }
+
+.banner {
+  padding-top: 80px;
+  padding-bottom: 0; }
+  .banner-slider {
+    position: relative;
+    --width-slider: -50px; }
+    .banner-slider .swiper-button-next::after, .banner-slider .swiper-button-prev::after {
+      display: none; }
+    @media only screen and (max-width: 63.9375em) {
+      .banner-slider .swiper-button-next, .banner-slider .swiper-button-prev {
+        display: none; }
+        .banner-slider .swiper-button-next .hide-on-bothTM, .banner-slider .swiper-button-prev .hide-on-bothTM {
+          display: none !important; } }
+    .banner-slider .swiper-button-next {
+      right: var(--width-slider); }
+    .banner-slider .swiper-button-prev {
+      left: var(--width-slider); }
+    .banner-slider .swiper-scrollbar {
+      display: none; }
+      @media only screen and (max-width: 63.9375em) {
+        .banner-slider .swiper-scrollbar {
+          margin-top: 20px;
+          position: relative;
+          display: block;
+          background: #232323; }
+          .banner-slider .swiper-scrollbar .hide-on-bothTM {
+            display: none !important; } }
+      @media only screen and (max-width: 63.9375em) {
+        .banner-slider .swiper-scrollbar-drag {
+          background: #499513;
+          height: 5px; }
+          .banner-slider .swiper-scrollbar-drag .hide-on-bothTM {
+            display: none !important; } }
+    .banner-slider a {
+      background-image: none !important; }
+    .banner-slider__item {
+      border-radius: 18px;
+      position: relative;
+      padding-top: 57%;
+      overflow: hidden; }
+      .banner-slider__item > img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover; }
+      @media only screen and (max-width: 63.9375em) {
+        .banner-slider__item {
+          border-radius: 8px; }
+          .banner-slider__item .hide-on-bothTM {
+            display: none !important; } }
