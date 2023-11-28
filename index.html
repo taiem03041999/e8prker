@@ -1557,8 +1557,8 @@
         </footer>
 
         <!-- Popup, remove active -->
-        <div id="DIV" class="intro-popup active">
-            <div class="intro-popup__bg" onclick="myFunction()"></div>
+        <div id="intro-popup__id" class="intro-popup active">
+            <div class="intro-popup__bg" onclick="popupFunction()"></div>
 
             <div class="intro-popup__wrap">
                 <div class="intro-popup__logo">
@@ -1612,8 +1612,8 @@
 
     <!-- Remove Popup -->
     <script>
-        function myFunction() {
-            var element = document.getElementById("DIV");
+        function popupFunction() {
+            var element = document.getElementById("intro-popup__id");
             element.classList.remove("active");
         }
     </script>
