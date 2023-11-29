@@ -131,7 +131,11 @@
             margin: 0 auto;
 
             padding: 0 10px;
-            box-shadow: 1px 1.5px 4px 0px rgba(0, 0, 0, 0.1) inset, 1px 1.5px 4px 0px rgba(0, 0, 0, 0.08) inset, 0px -0.5px 1px 0px rgba(255, 255, 255, 0.25) inset, 0px -0.5px 1px 0px rgba(255, 255, 255, 0.3) inset;
+            box-shadow:
+                1px 1.5px 4px 0px rgba(0, 0, 0, 0.1) inset,
+                1px 1.5px 4px 0px rgba(0, 0, 0, 0.08) inset,
+                0px -0.5px 1px 0px rgba(255, 255, 255, 0.25) inset,
+                0px -0.5px 1px 0px rgba(255, 255, 255, 0.3) inset;
 
             & + & {
                 margin-top: 15px;
