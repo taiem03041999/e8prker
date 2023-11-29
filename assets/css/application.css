@@ -37175,9 +37175,9 @@ div.table-rose-900.table-border th {
 }
 
 .from-purple-500 {
-    --tw-gradient-from: #a855f7;
+    --tw-gradient-from: #01cc46;
     --tw-gradient-to: rgba(168, 85, 247, 0);
-    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to)
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
 .from-purple-700 {
@@ -37332,7 +37332,7 @@ div.table-rose-900.table-border th {
 }
 
 .to-pink-500 {
-    --tw-gradient-to: #ec4899
+    --tw-gradient-to: #01b4cc;
 }
 
 .to-yellow-600 {
