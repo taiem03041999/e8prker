@@ -2094,16 +2094,40 @@
 </script>
 
 <!-- Popup -->
-<script>
+<!-- <script>
     setTimeout(function () {
         document.querySelector('#intro-popup__id').classList.add('active');
         document.querySelector('body').classList.add('active');
+    }, 3000);
+</script> -->
+
+<!-- Turn off Popup -->
+<!-- <script>
+    function popupFunction() {
+        var element = document.getElementById("intro-popup__id");
+        element.classList.remove("active");
+
+        var elementBody = document.querySelector("body");
+        elementBody.classList.remove("active");
+    }
+</script> -->
+
+<!-- Popup -->
+<script>
+    const isCheckShow = sessionStorage.getItem("isShow");
+    setTimeout(function () {
+        if (!isCheckShow) {
+            document.querySelector('#intro-popup__id').classList.add('active');
+            document.querySelector('body').classList.add('active');
+        }
     }, 3000);
 </script>
 
 <!-- Turn off Popup -->
 <script>
     function popupFunction() {
+        sessionStorage.setItem("isShow", true);
+
         var element = document.getElementById("intro-popup__id");
         element.classList.remove("active");
 
