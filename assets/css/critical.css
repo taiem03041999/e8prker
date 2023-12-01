@@ -475,11 +475,8 @@ p>a {
 }
 
 .text-gradient.violet {
-  background-image: -webkit-gradient(90deg,
-      #e48dd7 0,
-      #c55ab4 29.17%,
-      #a7098e 100%);
-  background-image: linear-gradient(90deg, #e48dd7, #c55ab4 29.17%, #a7098e);
+  background-image: -webkit-gradient(90deg, #01cc46 0, #01cc99 29.17%, #01cc46 100%);
+  background-image: linear-gradient(90deg, #01cc46, #01cc99 29.17%, #01cc46)
 }
 
 .text-gradient.tiffany {
@@ -488,8 +485,8 @@ p>a {
 }
 
 .text-gradient.yellow {
-  background-image: -webkit-gradient(90deg, #f5b161 1.8%, #ec366e 100%);
-  background-image: linear-gradient(90deg, #f5b161 1.8%, #ec366e);
+  background-image: -webkit-gradient(90deg, #01ccc2 1.8%, #01cc46 100%);
+  background-image: linear-gradient(90deg, #01ccc2 1.8%, #01cc46)
 }
 
 .text-gradient.orange {
@@ -3561,10 +3558,10 @@ header.header-scrolled {
   --tw-text-opacity: 1;
   -webkit-background-clip: text;
   background-clip: text;
-  border-color: rgb(219 39 119 / var(--tw-border-opacity));
+  border-color: rgb(1 204 70 / var(--tw-border-opacity));
   border-radius: 0.25rem;
   border-width: 1px;
-  color: rgb(219 39 119 / var(--tw-text-opacity));
+  color: rgb(1 204 70 / var(--tw-text-opacity));
   content: "N8 Exclusive";
   display: inline-block;
   flex-shrink: 0;
@@ -3619,7 +3616,7 @@ header.header-scrolled .menu-list>li .dropdown {
 }
 
 .mobile-menu-content .mobile-menu-wrapper .mobile-menu>div:after {
-  background: url(/assets/images/chevron-right.a202061c.svg) no-repeat 50%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='h-4 w-4 mdl-js' fill='none' viewBox='0 0 24 24' stroke='white' stroke-width='2'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M9 5l7 7-7 7'/%3E%3C/svg%3E");
   content: "";
   height: 1rem;
   width: 1rem;
@@ -3830,10 +3827,10 @@ header.header-scrolled .menu-list>li .dropdown {
   --tw-text-opacity: 1;
   -webkit-background-clip: text;
   background-clip: text;
-  border-color: rgb(219 39 119 / var(--tw-border-opacity));
+  border-color: rgb(1 204 70 / var(--tw-border-opacity));
   border-radius: 0.25rem;
   border-width: 1px;
-  color: rgb(219 39 119 / var(--tw-text-opacity));
+  color: rgb(1 204 70 / var(--tw-text-opacity));
   content: "N8 Exclusive";
   display: inline-block;
   flex-shrink: 0;
@@ -4323,7 +4320,7 @@ header.header-scrolled .mobile-menu-category-content>nav>li .dropdown {
   --tw-bg-opacity: 1;
   --tw-blur: blur(24px);
   --tw-content: "";
-  background-color: rgb(219 39 119 / var(--tw-bg-opacity));
+  background-color: rgb(1 204 70 / var(--tw-bg-opacity));
   border-radius: 9999px;
   content: var(--tw-content);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
@@ -4523,7 +4520,7 @@ section {
 
 .hover\:border-violet-400:hover {
   --tw-border-opacity: 1;
-  border-color: rgb(167 139 250 / var(--tw-border-opacity));
+  border-color: rgb(1 204 70 / var(--tw-border-opacity));
 }
 
 .hover\:border-amber-500:hover {
@@ -4581,7 +4578,7 @@ section {
 
 .hover\:bg-pink-600:hover {
   --tw-bg-opacity: 1;
-  background-color: rgb(219 39 119 / var(--tw-bg-opacity));
+  background-color: rgb(1 204 70 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-zinc-900\/70:hover {

@@ -1,0 +1,1692 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Lexend:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Lexend:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:wght@500;700;900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="./assets/css/next.css">
+    <link rel="stylesheet" href="./assets/css/application.css" as="style" />
+</head>
+
+<body>
+
+    <main class="relative z-10 bg-black" style="min-height:80vh">
+        <!-- notificationBanner -->
+        <div id="">
+            <div id="locale-notification-banner">
+                <div class="gap-4 p-3 bg-zinc-900">
+                    <div
+                        class="flex flex-wrap items-center justify-end max-w-screen-xl gap-2 mx-auto sm:flex-nowrap sm:justify-between">
+                        <p class="text-sm text-zinc-400">
+                            You seem to have your browser language set as English. Would you
+                            like the website to be translated for a better experience?
+                        </p>
+
+                        <div class="flex items-center gap-4">
+                            <p id="change-language-selector"
+                                class="hidden text-xs cursor-pointer sm:block text-zinc-400 hover:text-amber">
+                                Other Language
+                            </p>
+
+                            <a href="#"
+                                class="inline-block px-4 py-2 mr-1 text-xs border border-white rounded cursor-pointer hover:bg-zinc-100 hover:text-zinc-900">English</a>
+
+                            <button type="button" id="header-button-locale-notification-close"
+                                class="inline-block p-2 rounded-md hover:bg-zinc-800 focus:outline-none focus:ring-2 focus:ring-white">
+                                <span class="sr-only">Dismiss</span>
+                                <svg class="w-5 h-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                    viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12">
+                                    </path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="notificationBanner">
+                <div class="max-w-screen-xl p-4 mx-auto sm:p-2">
+                    <div class="flex flex-wrap items-center justify-between">
+                        <div class="flex items-center flex-1 w-0">
+                            <p class="text-sm text-white drop-shadow">
+                                APT Online 2023 | $15,000,000 GTD | 3 x Exclusive Lion
+                                Trophies | 14 Trophy Events | Lucky Draw Flipout Promotion
+                            </p>
+                        </div>
+
+                        <div class="flex-shrink-0 order-3 w-full mt-3 sm:order-2 sm:mt-0 sm:w-auto">
+                            <a href="#" id="header-cta-dropdown-banner-link"
+                                class="flex items-center justify-center px-4 py-2 text-sm font-medium text-pink-600 border border-transparent rounded-md shadow-sm hover:bg-white bg-zinc-100">
+                                Xem Thêm
+                            </a>
+                        </div>
+
+                        <div class="flex-shrink-0 order-2 sm:order-3 sm:ml-3">
+                            <button type="button" id="header-button-dropdown-banner-close"
+                                class="flex p-2 -mr-1 rounded-md hover:bg-zinc-300/20 focus:outline-none focus:ring-2 focus:ring-white sm:-mr-2">
+                                <span class="sr-only">Dismiss</span>
+                                <svg class="w-6 h-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                    viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12">
+                                    </path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-violet-800 to-pink-800 -z-20">
+                </div>
+            </div>
+        </div>
+        <div id="header-scroll-observer"></div>
+
+        <!-- header -->
+        <section class="sticky top-0 z-40 p-0 header-banner" id="navigation-header">
+            <header class="group">
+                <div
+                    class="gap-4 flex max-w-screen-2xl mx-auto items-center p-4 lg:p-6 xl:p-8 group-[.header-scrolled]:p-4 transition-all">
+                    <div class="grid shrink-0 place-items-center">
+                        <a class="inline-block" id="" href="#">
+
+                            <picture>
+                                <img src="./assets/images/e8poker-logo.png" alt="" class="w-auto h-8 sm:h-10"
+                                    loading="eager" fetchpriority="high" />
+                            </picture>
+                        </a>
+                    </div>
+
+                    <div class="hidden lg:block grow">
+                        <div class="relative max-w-4xl mx-auto">
+                            <nav class="mr-16" id="desktop-navbar">
+                                <ul class="flex justify-between menu-list">
+                                    <li class="with-dropdown">
+                                        <a class="text-xs cursor-pointer subheader-button xl:text-sm hover:text-gray-300"
+                                            id="header-link-getting-started-index" href="#">
+                                            Bắt đầu
+                                        </a>
+                                    </li>
+
+                                    <li class="with-dropdown">
+                                        <a class="text-xs cursor-pointer subheader-button xl:text-sm hover:text-gray-300"
+                                            id="header-link-promotions-index" href="#">
+                                            Chương trình khuyến mãi
+                                        </a>
+                                    </li>
+
+                                    <li class="inline-block with-dropdown">
+                                        <a class="text-xs cursor-pointer subheader-button xl:text-sm hover:text-gray-300"
+                                            id="header-link-tournaments-index" href="#">
+                                            Giải đấu
+                                        </a>
+                                    </li>
+
+                                    <li class="inline-block with-dropdown">
+                                        <a class="text-xs cursor-pointer xl:text-sm hover:text-gray-300"
+                                            id="header-link-poker-index" href="#">
+                                            Poker
+                                        </a>
+                                    </li>
+
+                                    <li class="inline-block with-dropdown">
+                                        <a class="text-xs cursor-pointer subheader-button xl:text-sm hover:text-gray-300"
+                                            id="header-link-casino-index" href="#">
+                                            Casino
+                                        </a>
+                                    </li>
+
+                                    <li class="inline-block with-dropdown">
+                                        <a class="text-xs cursor-pointer subheader-button xl:text-sm hover:text-gray-300"
+                                            id="header-link-ambassadors-index" href="#">
+                                            Đại sứ
+                                        </a>
+                                    </li>
+
+                                    <li class="inline-block">
+                                        <a class="text-xs cursor-pointer xl:text-sm hover:text-gray-300"
+                                            id="header-link-blog" href="#">
+                                            Blog
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+
+                            <div id="desktop-searchbar" class="searchbar" id="header-icon-search-button">
+                                <span id="desktop-searchbar-open"
+                                    class="flex items-center justify-center search-button">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none"
+                                        viewbox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                                    </svg>
+                                </span>
+
+                                <div id="desktop-search-node" class="w-full">
+                                    <div class="z-50">
+                                        <div class="ais-SearchBox">
+                                            <form novalidate="" class="ais-SearchBox-form" action="" role="search">
+                                                <input type="search" placeholder="Search E8prker..." autocomplete="off"
+                                                    autocorrect="off" autocapitalize="off" spellcheck="false"
+                                                    required="" maxlength="512" class="ais-SearchBox-input"
+                                                    value=""><button type="submit" title="Submit your search query."
+                                                    class="ais-SearchBox-submit"></button><button type="reset"
+                                                    title="Clear the search query." class="ais-SearchBox-reset"
+                                                    hidden=""><img
+                                                        src="data:image/webp;base64,UklGRlICAABXRUJQVlA4WAoAAAAQAAAAYwAAYwAAQUxQSM8AAAABgFXbdtzmQngQBEVQzKBiUDGQGNgMbAaGoDB4EB4Ez2OuftuImABc9KFXm77cSh897pdfm2hq6+6RNJFt3Q0/NtHV5lKaKKdzMk6ki5z5TLTHE2king6aiXrYccrNZNNN5BMAN9EXoOMXAeVn8FMFfaxBGGowlBqo1cCmf///3dBqYFqDMtRgCDWIvgYexk+ByK8FhJ8DkNm1ACDGTd0GgVuD/cws43jk9cFJKaxGOQNkThlXG+VjAdddxyYLbnWd8rAouN/Hvti3mfbB4yIAVlA4IFwBAAAQDACdASpkAGQAPpFEn0olpCMhqdM48LASCWkAC+m/gC8Bvl1Qb+ZJG8S5srY5I+lCcsYw9NsXVdcLjOUaaINUbpdo8n5Ao8ghOfZrxbxfvyd57XsBkjm/eOlSrAtG/ETwnSYQJj6GvwAA/ukQjfkO///58QSWeWV0x+uXG9fjoO8YSCD0vn9/1cUETaJE22rI8TZLP2EiFjLUAFoUQIZVXwz68QMhVozCyiTy9/u1MvGpXH4fvmJgXr+iGq4APeGQbPOHyvw4L3+RoPlMpX4uzdQj6QwAc7mBV8y0kjrWb91xpormERvnplCRz2D7xggYKEbkmwyMEHayjxt8qKtitAKNMEFW7vTqyG1u0OALFk3irk4iQz7kKgPfEX/chUB6h58p87pK/cETLtY6ZFrxAdeUm829wwRAk3aa7F/OW05KfUpuwsP/pfBu5rTj4BG/Ir//58Qhf3Z8AAA="
+                                                        alt=""></button></form>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <span id="desktop-searchbar-close">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none"
+                                        viewbox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M6 18L18 6M6 6l12 12">
+                                        </path>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hidden gap-2 xl:flex xl:gap-4 menu-list">
+                        <div id="locale-selector" class="relative inline-block">
+                            <span class="font-semibold cursor-pointer">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M10.5 21l5.25-11.25L21 21m-9-3h7.5M3 5.621a48.474 48.474 0 016-.371m0 0c1.12 0 2.233.038 3.334.114M9 5.25V3m3.334 2.364C11.176 10.658 7.69 15.08 3 17.502m9.334-12.138c.896.061 1.785.147 2.666.257m-4.589 8.495a18.023 18.023 0 01-3.827-5.802">
+                                    </path>
+                                </svg>
+                            </span>
+
+                            <div class="absolute top-0 right-0 w-6 h-6 rounded-full highlight -z-10 bg-amber-400 blur">
+                            </div>
+
+                            <div class="absolute right-0 z-50 pt-4 dropdown top-8 w-52">
+                                <ul class="static z-50 w-full p-2 border rounded-lg bg-zinc-900 border-zinc-700">
+                                    <li>
+                                        <a href="#" class="block p-2 rounded style-none hover:bg-zinc-800">English</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#" class="block p-2 rounded style-none hover:bg-zinc-800">简体中文</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#" class="block p-2 rounded style-none hover:bg-zinc-800">繁體中文</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#" class="block p-2 rounded style-none hover:bg-zinc-800">ภาษาไทย</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#" class="block p-2 rounded style-none hover:bg-zinc-800">Tiếng
+                                            Việt</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="relative inline-block">
+                            <span class="font-semibold cursor-pointer">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewbox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z">
+                                    </path>
+                                </svg>
+                            </span>
+
+                            <div class="absolute top-0 right-0 w-6 h-6 rounded-full highlight -z-10 bg-sky-400 blur">
+                            </div>
+
+                            <div class="absolute right-0 z-50 pt-4 dropdown top-8 w-52">
+                                <div class="p-2 border rounded-lg shadow-lg bg-zinc-900 border-zinc-700 shadow-black">
+                                    <ul class="items">
+                                        <li class="w-full !mb-0">
+                                            <a target="_blank" href="#" id="header-icon-info-faq"
+                                                class="flex items-center justify-between gap-2 p-3 transition rounded hover:bg-black">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6"
+                                                    viewbox="0 0 20 20" fill="currentColor">
+                                                    <path fill-rule="evenodd"
+                                                        d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
+                                                        clip-rule="evenodd"></path>
+                                                </svg>
+
+                                                <span>Câu hỏi thường gặp</span>
+                                            </a>
+                                        </li>
+
+                                        <li class="w-full">
+                                            <a id="header-icon-info-live-chat"
+                                                class="flex items-center justify-between gap-2 p-3 transition rounded hover:bg-black live-chat-button">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
+                                                    viewbox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z">
+                                                    </path>
+                                                </svg>
+
+                                                <span>Trò Chuyện Trực Tiếp</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="relative inline-block border-red-500">
+                            <span class="font-semibold cursor-pointer">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewbox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z">
+                                    </path>
+                                </svg>
+                            </span>
+
+                            <div class="absolute top-0 right-0 w-6 h-6 bg-red-400 rounded-full highlight -z-10 blur">
+                            </div>
+
+                            <div class="absolute right-0 z-50 pt-4 dropdown top-8 w-52">
+                                <div
+                                    class="overflow-hidden border rounded-lg shadow-lg bg-zinc-900 border-zinc-700 shadow-black">
+                                    <ul class="flex flex-col w-full gap-2 p-2 items">
+                                        <li class="w-full !mb-0">
+                                            <a id="header-cta-login"
+                                                class="flex items-center justify-between gap-2 p-3 transition rounded hover:bg-black"
+                                                href="#">
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24"
+                                                    stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z">
+                                                    </path>
+                                                </svg>
+
+                                                <span>Đăng nhập</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex grow lg:hidden"></div>
+
+                    <div class="hidden lg:flex xl:hidden menu-list">
+                        <div id="9-dots-selector" class="relative inline-block">
+                            <div class="p-2 rounded cursor-pointer hover:bg-gray-900">
+                                <svg class="w-4 h-4" viewbox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M1.66671 3C0.930328 3 0.333374 2.40305 0.333374 1.66667C0.333374 0.930286 0.930328 0.333333 1.66671 0.333333C2.40309 0.333333 3.00004 0.930287 3.00004 1.66667C3.00004 2.40305 2.40309 3 1.66671 3ZM7.00004 3C6.26366 3 5.66671 2.40305 5.66671 1.66667C5.66671 0.930287 6.26366 0.333333 7.00004 0.333333C7.73642 0.333333 8.33337 0.930287 8.33337 1.66667C8.33337 2.40305 7.73642 3 7.00004 3ZM12.3334 3C11.597 3 11 2.40305 11 1.66667C11 0.930287 11.597 0.333333 12.3334 0.333333C13.0698 0.333333 13.6667 0.930287 13.6667 1.66667C13.6667 2.40305 13.0698 3 12.3334 3ZM1.66671 8.33333C0.930328 8.33333 0.333374 7.73638 0.333374 7C0.333374 6.26362 0.930328 5.66667 1.66671 5.66667C2.40309 5.66667 3.00004 6.26362 3.00004 7C3.00004 7.73638 2.40309 8.33333 1.66671 8.33333ZM7.00004 8.33333C6.26366 8.33333 5.66671 7.73638 5.66671 7C5.66671 6.26362 6.26366 5.66667 7.00004 5.66667C7.73642 5.66667 8.33337 6.26362 8.33337 7C8.33337 7.73638 7.73642 8.33333 7.00004 8.33333ZM12.3334 8.33333C11.597 8.33333 11 7.73638 11 7C11 6.26362 11.597 5.66667 12.3334 5.66667C13.0698 5.66667 13.6667 6.26362 13.6667 7C13.6667 7.73638 13.0698 8.33333 12.3334 8.33333ZM0.333374 12.3333C0.333374 13.0697 0.930328 13.6667 1.66671 13.6667C2.40309 13.6667 3.00004 13.0697 3.00004 12.3333C3.00004 11.597 2.40309 11 1.66671 11C0.930328 11 0.333374 11.597 0.333374 12.3333ZM5.66671 12.3333C5.66671 13.0697 6.26366 13.6667 7.00004 13.6667C7.73642 13.6667 8.33337 13.0697 8.33337 12.3333C8.33337 11.597 7.73642 11 7.00004 11C6.26366 11 5.66671 11.597 5.66671 12.3333ZM11 12.3333C11 13.0697 11.597 13.6667 12.3334 13.6667C13.0698 13.6667 13.6667 13.0697 13.6667 12.3333C13.6667 11.597 13.0698 11 12.3334 11C11.597 11 11 11.597 11 12.3333Z"
+                                        fill="white"></path>
+                                </svg>
+                            </div>
+
+                            <div class="absolute right-0 z-50 pt-4 dropdown top-8 w-52">
+                                <div class="border rounded-lg shadow bg-zinc-900 border-zinc-700 shadow-black">
+                                    <ul class="flex flex-col w-full gap-1 p-2 items">
+                                        <li class="w-full !mb-0">
+                                            <a id="header-link-others-login"
+                                                class="flex items-center justify-between gap-2 p-3 transition rounded hover:bg-black"
+                                                href="#">
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24"
+                                                    stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z">
+                                                    </path>
+                                                </svg>
+                                                <span class="text-sm">Đăng nhập</span>
+                                            </a>
+                                        </li>
+
+                                        <li class="w-full !mb-0">
+                                            <a id="header-link-others-live-chat"
+                                                class="flex items-center justify-between gap-2 p-3 transition rounded hover:bg-black live-chat-button">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
+                                                    viewbox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z">
+                                                    </path>
+                                                </svg>
+                                                <span>Trò Chuyện Trực Tiếp</span>
+                                            </a>
+                                        </li>
+
+                                        <li class="w-full">
+                                            <a href="#" id="header-link-others-faq"
+                                                class="flex items-center justify-between gap-2 p-3 transition rounded hover:bg-black">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6"
+                                                    viewbox="0 0 20 20" fill="currentColor">
+                                                    <path fill-rule="evenodd"
+                                                        d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
+                                                        clip-rule="evenodd"></path>
+                                                </svg>
+                                                <span>Câu hỏi thường gặp</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+
+                                    <div class="locale-selector">
+                                        <div class="relative inline-block w-full">
+                                            <input type="checkbox" class="hidden peer/selected"
+                                                id="other-locale-selector" name="other-locale-selector" value="dasda" />
+                                            <label for="other-locale-selector"
+                                                class="flex items-center justify-between inline-block w-full gap-2 px-6 py-4 rounded cursor-pointer group bg-zinc-800 hover:bg-zinc-600 peer-checked/selected:bg-zinc-900">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
+                                                    viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                                    class="w-6 h-6">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418">
+                                                    </path>
+                                                </svg>
+                                                <span class="pr-6 text-sm">Tiếng Việt</span>
+                                            </label>
+
+                                            <svg class="absolute w-4 h-4 top-5 right-3 peer-checked/selected:rotate-180"
+                                                xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24"
+                                                stroke-width="1.5" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+                                            </svg>
+
+                                            <ul
+                                                class="hidden peer-checked/selected:block bg-black p-2 rounded-lg relative -mt-[60px] top-0 w-full z-50 border border-zinc-700">
+                                                <label for="other-locale-selector"
+                                                    class="block p-1 text-right rounded cursor-pointer">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                        viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                                        class="inline-block w-4 h-4">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M6 18L18 6M6 6l12 12"></path>
+                                                    </svg>
+                                                </label>
+
+                                                <li>
+                                                    <a href="#"
+                                                        class="block p-2 rounded style-none hover:bg-zinc-800">English</a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="#"
+                                                        class="block p-2 rounded style-none hover:bg-zinc-800">简体中文</a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="#"
+                                                        class="block p-2 rounded style-none hover:bg-zinc-800">繁體中文</a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="#"
+                                                        class="block p-2 rounded style-none hover:bg-zinc-800">ภาษาไทย</a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="#"
+                                                        class="block p-2 rounded style-none hover:bg-zinc-800">Tiếng
+                                                        Việt</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-2 xl:gap-4">
+                        <a id="header-cta-download"
+                            class="hidden text-sm font-semibold text-pink-600 sm:block hover:text-pink-500"
+                            href="#">Download</a>
+
+                        <a href="#">
+                            <button class="btn btn-primary" id="header-cta-signup">
+                                Đăng ký
+                            </button>
+                        </a>
+                    </div>
+
+                    <div class="flex items-center self-center lg:hidden">
+                        <button id="header-button-mobile-open-btn" type="button"
+                            class="inline-flex items-center justify-center text-white rounded-md focus:text-gray-300">
+                            <span class="sr-only">Open menu</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="block w-6 h-6 lg:hidden" fill="none"
+                                viewbox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h16M4 18h16">
+                                </path>
+                            </svg>
+                        </button>
+
+                        <div id="mobile-header" class="mobile-header">
+                            <div
+                                class="flex flex-col flex-grow h-full overflow-hidden rounded-lg bg-zinc-900 ring-1 ring-gray-300 ring-opacity-25">
+                                <div class="mobile-header-logo">
+                                    <picture>
+                                        <img src="./assets/images/e8poker-logo.png" alt="" class="w-auto h-8 sm:h-10"
+                                            loading="eager" fetchpriority="high" />
+                                    </picture>
+                                    <div class="flex items-center">
+                                        <a href="#">
+                                            <button class="mr-2 btn btn-primary" id="header-cta-mobile-signup">
+                                                Đăng ký
+                                            </button>
+                                        </a>
+                                        <button id="header-button-mobile-close-btn" type="button"
+                                            class="mobile-header-close-btn">
+                                            <span class="sr-only">Close menu</span>
+                                            <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                viewbox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M6 18L18 6M6 6l12 12">
+                                                </path>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div id="mobile-menu-content" class="mobile-menu-content">
+                                    <nav class="mobile-menu-wrapper" aria-label="Sidebar">
+                                        <div class="p-3">
+                                            <div id="mobile-searchbar" class="flex items-center searchbar expanded">
+                                                <span id="mobile-searchbar-open"
+                                                    class="inline-block text-center search-button">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mx-auto"
+                                                        fill="none" viewbox="0 0 24 24" stroke="currentColor">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            stroke-width="2"
+                                                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                                                    </svg>
+                                                </span>
+                                                <div id="mobile-search-node" class="w-full">
+                                                    <div class="z-50">
+                                                        <div class="ais-SearchBox">
+                                                            <form novalidate="" class="ais-SearchBox-form" action=""
+                                                                role="search"><input type="search"
+                                                                    placeholder="Search Natural8..." autocomplete="off"
+                                                                    autocorrect="off" autocapitalize="off"
+                                                                    spellcheck="false" required="" maxlength="512"
+                                                                    class="ais-SearchBox-input" value=""><button
+                                                                    type="submit" title="Submit your search query."
+                                                                    class="ais-SearchBox-submit"></button><button
+                                                                    type="reset" title="Clear the search query."
+                                                                    class="ais-SearchBox-reset" hidden=""><img
+                                                                        src="data:image/webp;base64,UklGRlICAABXRUJQVlA4WAoAAAAQAAAAYwAAYwAAQUxQSM8AAAABgFXbdtzmQngQBEVQzKBiUDGQGNgMbAaGoDB4EB4Ez2OuftuImABc9KFXm77cSh897pdfm2hq6+6RNJFt3Q0/NtHV5lKaKKdzMk6ki5z5TLTHE2king6aiXrYccrNZNNN5BMAN9EXoOMXAeVn8FMFfaxBGGowlBqo1cCmf///3dBqYFqDMtRgCDWIvgYexk+ByK8FhJ8DkNm1ACDGTd0GgVuD/cws43jk9cFJKaxGOQNkThlXG+VjAdddxyYLbnWd8rAouN/Hvti3mfbB4yIAVlA4IFwBAAAQDACdASpkAGQAPpFEn0olpCMhqdM48LASCWkAC+m/gC8Bvl1Qb+ZJG8S5srY5I+lCcsYw9NsXVdcLjOUaaINUbpdo8n5Ao8ghOfZrxbxfvyd57XsBkjm/eOlSrAtG/ETwnSYQJj6GvwAA/ukQjfkO///58QSWeWV0x+uXG9fjoO8YSCD0vn9/1cUETaJE22rI8TZLP2EiFjLUAFoUQIZVXwz68QMhVozCyiTy9/u1MvGpXH4fvmJgXr+iGq4APeGQbPOHyvw4L3+RoPlMpX4uzdQj6QwAc7mBV8y0kjrWb91xpormERvnplCRz2D7xggYKEbkmwyMEHayjxt8qKtitAKNMEFW7vTqyG1u0OALFk3irk4iQz7kKgPfEX/chUB6h58p87pK/cETLtY6ZFrxAdeUm829wwRAk3aa7F/OW05KfUpuwsP/pfBu5rTj4BG/Ir//58Qhf3Z8AAA="
+                                                                        alt="">
+                                                                </button>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="overflow-y-scroll" style="max-height: calc(100% - 80px)">
+                                            <nav class="mobile-menu">
+                                                <div data-sidebar-category="mobileSidebarGetStarted"
+                                                    class="mobile-menu-header">
+                                                    Bắt đầu
+                                                </div>
+
+                                                <div data-sidebar-category="mobileSidebarPromotions"
+                                                    class="mobile-menu-header">
+                                                    Chương trình khuyến mãi
+                                                </div>
+
+                                                <div data-sidebar-category="mobileSidebarTournaments"
+                                                    class="mobile-menu-header">
+                                                    Giải đấu
+                                                </div>
+
+                                                <div data-sidebar-category="mobileSidebarPoker"
+                                                    class="mobile-menu-header">
+                                                    Poker
+                                                </div>
+
+                                                <div data-sidebar-category="mobileSidebarCasino"
+                                                    class="mobile-menu-header">
+                                                    Casino
+                                                </div>
+
+                                                <div data-sidebar-category="mobileSidebarAmbassadors"
+                                                    class="mobile-menu-header">
+                                                    Đại sứ
+                                                </div>
+
+                                                <a class="py-4 text-sm cursor-pointer hover:text-gray-300" href="#">Blog
+                                                </a>
+                                            </nav>
+
+                                            <div class="px-3 pb-24">
+                                                <div class="locale-selector">
+                                                    <div class="relative inline-block w-full">
+                                                        <input type="checkbox" class="hidden peer/selected"
+                                                            id="mobile-menu-locale-selector"
+                                                            name="mobile-menu-locale-selector" value="dasda" />
+
+                                                        <label for="mobile-menu-locale-selector"
+                                                            class="flex items-center justify-between inline-block w-full gap-2 px-6 py-4 rounded cursor-pointer group bg-zinc-800 hover:bg-zinc-600 peer-checked/selected:bg-zinc-900">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6"
+                                                                fill="none" viewbox="0 0 24 24" stroke-width="1.5"
+                                                                stroke="currentColor" class="w-6 h-6">
+                                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                                    d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418">
+                                                                </path>
+                                                            </svg>
+
+                                                            <span class="pr-6 text-sm">Tiếng Việt</span>
+                                                        </label>
+
+                                                        <svg class="absolute w-4 h-4 top-5 right-3 peer-checked/selected:rotate-180"
+                                                            xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                            viewbox="0 0 24 24" stroke-width="1.5"
+                                                            stroke="currentColor">
+                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                                d="M19.5 8.25l-7.5 7.5-7.5-7.5">
+                                                            </path>
+                                                        </svg>
+
+                                                        <ul
+                                                            class="hidden peer-checked/selected:block bg-black p-2 rounded-lg absolute transform -translate-y-[20%] -mt-[60px] top-0 w-full z-50 border border-zinc-700">
+                                                            <label for="mobile-menu-locale-selector"
+                                                                class="block p-1 text-right rounded cursor-pointer">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                                    viewbox="0 0 24 24" stroke-width="1.5"
+                                                                    stroke="currentColor" class="inline-block w-4 h-4">
+                                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                                        d="M6 18L18 6M6 6l12 12"></path>
+                                                                </svg>
+                                                            </label>
+
+                                                            <li>
+                                                                <a href="#"
+                                                                    class="block p-2 rounded style-none hover:bg-zinc-800">English
+                                                                </a>
+                                                            </li>
+
+                                                            <li>
+                                                                <a href="#"
+                                                                    class="block p-2 rounded style-none hover:bg-zinc-800">简体中文
+                                                                </a>
+                                                            </li>
+
+                                                            <li>
+                                                                <a href="#"
+                                                                    class="block p-2 rounded style-none hover:bg-zinc-800">繁體中文
+                                                                </a>
+                                                            </li>
+
+                                                            <li>
+                                                                <a href="#"
+                                                                    class="block p-2 rounded style-none hover:bg-zinc-800">ภาษาไทย
+                                                                </a>
+                                                            </li>
+
+                                                            <li>
+                                                                <a href="#"
+                                                                    class="block p-2 rounded style-none hover:bg-zinc-800">
+                                                                    Tiếng Việt
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="mobile-menu-footer">
+                                            <a id="header-cta-mobile-download" class="ml-1.5 text-white" href="#">
+                                                Tải về
+                                            </a>
+
+                                            <a id="header-cta-mobile-login" class="ml-1.5 text-pink-600" href="#">
+                                                Đăng nhập
+                                            </a>
+                                        </div>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </section>
+
+        <div class="sticky z-40 bg-black border-b top-[72px] md:top-0 border-zinc-800">
+            <div class="relative pt-4">
+                <div class="absolute inset-0 bottom-px"><img alt="APT Hanoi Billions 2023" fetchpriority="high"
+                        decoding="async" data-nimg="fill" class="object-cover brightness-[0.25] "
+                        style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent"
+                        sizes="(max-width: 768px) 50vw, 100vw"
+                        srcset="/_next/image?url=https%3A%2F%2Fcdn.theasianpokertour.com%2FNCC_5_1_c75c504381.png&amp;w=384&amp;q=75 384w, /_next/image?url=https%3A%2F%2Fcdn.theasianpokertour.com%2FNCC_5_1_c75c504381.png&amp;w=640&amp;q=75 640w, /_next/image?url=https%3A%2F%2Fcdn.theasianpokertour.com%2FNCC_5_1_c75c504381.png&amp;w=750&amp;q=75 750w, /_next/image?url=https%3A%2F%2Fcdn.theasianpokertour.com%2FNCC_5_1_c75c504381.png&amp;w=828&amp;q=75 828w, /_next/image?url=https%3A%2F%2Fcdn.theasianpokertour.com%2FNCC_5_1_c75c504381.png&amp;w=1080&amp;q=75 1080w, /_next/image?url=https%3A%2F%2Fcdn.theasianpokertour.com%2FNCC_5_1_c75c504381.png&amp;w=1200&amp;q=75 1200w, /_next/image?url=https%3A%2F%2Fcdn.theasianpokertour.com%2FNCC_5_1_c75c504381.png&amp;w=1920&amp;q=75 1920w, /_next/image?url=https%3A%2F%2Fcdn.theasianpokertour.com%2FNCC_5_1_c75c504381.png&amp;w=2048&amp;q=75 2048w, /_next/image?url=https%3A%2F%2Fcdn.theasianpokertour.com%2FNCC_5_1_c75c504381.png&amp;w=3840&amp;q=75 3840w"
+                        src="/_next/image?url=https%3A%2F%2Fcdn.theasianpokertour.com%2FNCC_5_1_c75c504381.png&amp;w=3840&amp;q=75">
+                </div>
+                <div
+                    class="absolute inset-x-0 top-0 bottom-0 bg-gradient-to-b from-black via-transparent to-black backdrop-blur-sm">
+                </div>
+                <div class="container px-4 pb-0 md:px-0 lg:px-16 xl:px-24">
+                    <div class="relative grid grid-cols-1 pb-4 md:grid-cols-5 md:pb-6">
+                        <div
+                            class="col-span-3 md:min-w-[28rem] md:max-w-3xl relative cursor-pointer flex gap-2 p-2 rounded-lg items-center hover:bg-zinc-900">
+                            <div
+                                class="flex items-center justify-center w-12 h-12 text-center rounded-lg md:h-16 md:w-16 bg-zinc-900 shrink-0">
+                                <div class="">
+                                    <p class="m-0 text-lg font-bold leading-none md:text-3xl ">1</p>
+                                    <p class="m-0 mt-0 text-sm font-semibold leading-none md:text-lg md:-mt-2">Dec</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center p-2 pl-1 md:p-2 md:block">
+                                <h1 class="inline font-sans text-base md:text-xl lg:text-2xl">#1:
+                                    <!-- -->[Đã chuyển sang thứ Hai / Moved to Monday - 14:00] Freeroll for an APT Hanoi
+                                    Billions Main Event Seat (Cap 360 Players)</h1>
+                            </div><span class=""><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" aria-hidden="true" class="h-7 w-7">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M8.25 15L12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9"></path>
+                                </svg></span>
+                            <div
+                                class="absolute inset-x-0 z-10 hidden h-64 overflow-y-scroll bg-zinc-900/90 backdrop-blur top-full">
+                                <a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/81362eb6-dde1-49f4-a896-7afbd10c9e55">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#2:
+                                        <!-- -->Vietnam National Cup - Flight A - VND 3,000,000,000 GTD</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/8d27ac38-31aa-4e5d-95ec-22823438b3dc">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#3:
+                                        <!-- -->Single Day High Roller - Freezeout - 8 Max</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/8222ae2b-8a8a-4316-bdb4-13927e482ffb">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#4:
+                                        <!-- -->PL Omaha Hi-Lo - 5 Card (Big O) - 8 Max</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/791dcc33-6bce-482a-b61b-468ce3602873">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#2:
+                                        <!-- -->Vietnam National Cup - Flight B - VND 3,000,000,000 GTD</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/d05558a5-9ddc-4747-b678-f3dd51a0a23d">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#5:
+                                        <!-- -->Turbo</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/87d135c9-c8d8-4416-ba58-329ca40ca1c6">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#6:
+                                        <!-- -->Turbo - NL Single Draw 2-7</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/271377bd-0897-4087-8635-1ee297c6c98d">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#7:
+                                        <!-- -->Satellite to APT Super High Roller - 1 Seat GTD (Win Your Seat @ 75,000
+                                        Chips)</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/73588dca-63e6-4dfe-ace3-6d8b2eace433">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#8:
+                                        <!-- -->Hyper Turbo - Win the Button</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/e5b7178d-de82-46a6-bcbb-4e8a79678280">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#9:
+                                        <!-- -->Mystery Bounty Hunter (Top Bounty VND 500,000,000 GTD) - Sponsored by
+                                        Natural8 - Flight A - VND 5,000,000,000 GTD</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/6ad6e857-8415-487d-811c-6acc8ddee6a1">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#2:
+                                        <!-- -->Vietnam National Cup - Final Day - VND 3,000,000,000 GTD</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/fca0d516-eb69-4c2b-9e0f-efab3a9eb680">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#10:
+                                        <!-- -->APT Super High Roller - 8 Max - Day 1 - VND 4,000,000,000 GTD</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/1797274a-7d83-4d92-8cd7-56202802bc80">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#11:
+                                        <!-- -->Limit R-O-S-E (Razz, Omaha Hi-Lo, Stud, Stud Hi-Lo) - 8 Max</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/2fd08319-624d-4fe0-830b-e7a167105c71">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#12:
+                                        <!-- -->PL Omaha High Mix (4 Card, 5 Card, 6 Card) - 7 Max</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/7fc8bde7-8805-4cb4-849f-d0f13839a870">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#9:
+                                        <!-- -->Mystery Bounty Hunter (Top Bounty VND 500,000,000 GTD) - Sponsored by
+                                        Natural8 - Flight B - VND 5,000,000,000 GTD</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/d8c170fb-c9c1-4d9f-b474-f607e851aee5">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#13:
+                                        <!-- -->Turbo</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/ec1baea2-3bb1-4371-b034-a87f6a120fd1">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#14:
+                                        <!-- -->Turbo - NL Single Draw Mix (A-5, 2-7)</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/01556629-3df6-4470-844a-ac0b1bdd526c">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#15:
+                                        <!-- -->Hyper Turbo - Bomb Pot (1BB Pre Flop Per Player)</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/de3ffe1a-2259-4c9f-a615-43f784ede12a">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#16:
+                                        <!-- -->Sunday Super Stack - VND 2,000,000,000 GTD</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/1add469b-f89b-42f3-b179-8289a906cd43">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#9:
+                                        <!-- -->Mystery Bounty Hunter (Top Bounty VND 500,000,000 GTD) - Sponsored by
+                                        Natural8 - Final Day - VND 5,000,000,000 GTD</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/9ee3bbcb-a9a7-4f53-84fc-2c4028a569de">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#10:
+                                        <!-- -->APT Super High Roller - 8 Max - Final Day - VND 4,000,000,000 GTD</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/0eda65d2-b67d-4128-aa50-d086cf182393">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#17:
+                                        <!-- -->Nine Game (NLH, Stud, Omaha Hi-Lo, Razz, PL Omaha, L Hold'em, NL 2-7,
+                                        Stud Hi-Lo, 2-7 Triple Draw) - 7 Max</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/412cbe4e-2220-47f5-955e-1f89c2b535e2">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#18:
+                                        <!-- -->Single Day High Roller - 8 Max</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/a6978ae8-3047-45cc-a49c-c45c95342d70">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#19:
+                                        <!-- -->PL Omaha High - 5 Card - 8 Max</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/4cff16bf-0763-4fa2-80d5-75eb02746375">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#20:
+                                        <!-- -->Short Deck - Triple Chance - 6 Max</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/9d6ccc3f-5190-446a-853e-2ffede1a68f0">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#21:
+                                        <!-- -->Satellite to APT Main Event - 10 Seats GTD (Win Your Seat @ 120,000
+                                        Chips)</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/ab488c1d-405a-4937-98f8-ce99a9b14b48">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#22:
+                                        <!-- -->Turbo - Double Stack</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/cdf055c6-1de3-4a86-8bf9-82bf79ca018e">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#23:
+                                        <!-- -->Turbo - Crazy Pineapple (Get 3, Discard 1 Post Flop)</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/12e34532-32c0-4f09-aac2-4a7823298502">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#24:
+                                        <!-- -->Turbo - NL Single Draw Mix (A-5, 2-7, Badugi)</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/8de69121-367c-4287-8ba3-d9f02a228102">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#25:
+                                        <!-- -->Tick Tock BOOM! (Levels Decrease Every Hour 15/10/5/2)</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/68e0c5a4-eeb9-4db0-921a-3f53c7d33e21">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#26:
+                                        <!-- -->APT Main Event - Flight A (60 Mins) - VND 25,000,000,000 GTD</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/c7b2dab0-e01e-4ae7-8d4b-ab35c06a3e84">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#27:
+                                        <!-- -->Limit Triple Draw Mix (Badugi, A-5, Badacey, 2-7, Badeucey, 5 Card Draw)
+                                    </div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/4546c5b3-0c97-4ce1-8694-cb75c5edd657">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#28:
+                                        <!-- -->NL Hold'em - Freezeout</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/22d7685e-938a-43be-b5be-f6db04353032">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#29:
+                                        <!-- -->Superstar Challenge - 8 Max - VND 4,000,000,000 GTD</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/3cb08d27-2385-4911-b713-25d5595aabb5">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">N8IN X APT Hanoi
+                                        Billions 2023 Final Table</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/596d5bb2-24f5-4b51-ac55-89bad35c958a">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#30:
+                                        <!-- -->PL Omaha High - Lazy Rivers (Individual River Card Face Up)</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/f31a2868-0fc9-453d-b755-877c3b8306c1">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#1:
+                                        <!-- -->Freeroll for an APT Hanoi Billions Main Event Seat (Cap 360 Players)
+                                    </div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/f8a77492-84de-49c5-b36d-7b7610723ba1">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#31:
+                                        <!-- -->Satellite to APT Main Event - 5 Seats GTD (Win Your Seat @ 75,000 Chips)
+                                    </div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/62442f87-3650-49e5-a011-c928d5d69e47">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#32:
+                                        <!-- -->Turbo - Double Stack</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/95dfc161-3bc3-4726-8950-360eff72d33b">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">Vietnam Poker
+                                        Influencer Challenge 2023 Final Table</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/674c1f1a-a742-4ea2-800e-e9f52b13134e">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#33:
+                                        <!-- -->Turbo - Deuces Wild</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/ccf51181-f20d-4673-bdf7-d57c6d2d63dc">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#34:
+                                        <!-- -->Turbo - NL Omaha Hi-Lo - 5 Card</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/ab999cfd-be50-47b7-a7a6-d6d35189d510">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#35:
+                                        <!-- -->Hyper Turbo </div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/b85367c5-8aca-45db-b4fb-9a589138ac14">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#26:
+                                        <!-- -->APT Main Event - Flight B (45 Mins) - VND 25,000,000,000 GTD</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/a983b1c9-92f2-4398-90b9-6228c445001c">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#36:
+                                        <!-- -->Flipouts - From 11AM-2PM (1 in 8 Will Advance to 2PM ITM Stage)</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/93776913-ad8a-4a49-986e-22365347da62">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#37:
+                                        <!-- -->Limit Triple Draw Mix (A-5, 2-7, Badugi)</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/3a51141e-d263-491e-841d-b475472fe188">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#38:
+                                        <!-- -->NL Hold'em - Single Re-Entry</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/6a4fe42b-96df-4f7c-8f58-74ecd2e73571">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#39:
+                                        <!-- -->Single Day High Roller - Mystery Bounty - 8 Max (20M Bounty)</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/89908c96-147e-47e4-b219-4056e353ea44">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">N8HK X APT Hanoi
+                                        Billions 2023 Final Table</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/b946b513-6c7d-402e-8e8f-d6bb8adfae5d">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#40:
+                                        <!-- -->PL Omaha Hi-Lo Mix - 4 Card, 5 Card, 6 Card - 7 Max</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/c5877bc9-b380-49b1-be76-2453c48e2091">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#41:
+                                        <!-- -->Women's Event</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/2d80f9a3-cf4e-4335-8d62-147ffa8364e1">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#42:
+                                        <!-- -->Satellite to APT Main Event - 1 Seat GTD (Option to Take Cash / Win Your
+                                        Seat @ 75,000 Chips)</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/03f9d16a-c4f4-40f6-88ac-66a490e06494">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#43:
+                                        <!-- -->Turbo - Double Stack</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/5693c022-305c-4a7e-a17f-c148f45fff1b">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">N8TH X APT Hanoi
+                                        Billions 2023 Final Table</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/1372fc64-2026-4d81-97e5-cc493f3e5a8f">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#44:
+                                        <!-- -->Turbo - Super Hold'em (3 Hole Cards, Use 0,1,2,3 Cards)</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/dfef3ad2-d3e8-492a-94f4-b677f16cf5f1">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#45:
+                                        <!-- -->Turbo - NL R-O-S-E (Razz, Omaha Hi-Lo, Stud, Stud Hi-Lo)</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/c32b1c61-42f5-4c62-8bd1-05c80a7f27b0">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#46:
+                                        <!-- -->Tick Tock BOOM! (Levels Decrease Every Hour 15/10/5/2)</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/202bdf9a-5b5d-44e8-bb20-a5ffefbbce39">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#47:
+                                        <!-- -->Super Hyper Turbo </div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/fa587598-a820-4f17-adbc-ae0d9604ca6f">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#26:
+                                        <!-- -->APT Main Event - Flight C (30 Mins Levels 1-6 / 40 Mins Levels 7-10) -
+                                        VND 25,000,000,000 GTD </div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/c6879997-02bf-4cda-93d8-f23da632b429">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#48:
+                                        <!-- -->Eight Game - (L Hold'em, Stud Hi-Lo, Razz, Omaha Hi-Lo, 7 Stud, PL
+                                        Omaha, NLH, 2-7 Triple Draw) - 7 Max</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/96784b08-22ff-43c3-a842-07749252ba4b">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#49:
+                                        <!-- -->Hanoi - Enter the Dragon - Sponsored by Natural8</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/69078afc-114c-458e-a68c-409a8de8e75b">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#50:
+                                        <!-- -->Single Day High Roller - 8 Max</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/704cde6c-969f-43f1-8f3f-d1252362a022">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">N8TW X APT Hanoi
+                                        Billions 2023 Final Table</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/102ba9f3-1739-4306-8e81-2b765f84f5b9">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#51:
+                                        <!-- -->PL Omaha High - 8 Max</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/571036b3-e6e8-4740-bcc6-3dc2454b85eb">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#52:
+                                        <!-- -->Women's Event</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/03467c85-c92d-4ea1-9e93-f3c7ae691c9f">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#26:
+                                        <!-- -->APT Main Event - Flight D (30 Mins) - VND 25,000,000,000 GTD</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/1c1c7326-edf5-4faa-9077-ebdf02258def">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#53:
+                                        <!-- -->Turbo - Double Stack</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/0b856879-93c6-4776-b59e-f2a567744574">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">N8 Influencer
+                                        Challenge 2023 Final Table</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/316cc35d-3d53-4ae9-8b8c-da17d6b05030">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#54:
+                                        <!-- -->Turbo - Double Board, Single Winner</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/79a3e077-19d5-4215-8a9f-d126b4b93d37">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#55:
+                                        <!-- -->Turbo - NL Single Draw 2-7</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/45b6425d-b243-4d5f-9bfd-ea95866c53e1">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#56:
+                                        <!-- -->Hyper Turbo </div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/2d43a01a-9ca7-4244-84c9-d62491d12c8d">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#57:
+                                        <!-- -->Super Hyper Turbo - All In or Fold</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/557ada89-b22e-4fb9-b346-07de03805df3">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#26:
+                                        <!-- -->APT Main Event - Day 2 (Reg Open Till Start) - VND 25,000,000,000 GTD
+                                    </div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/c9f28112-b70b-4ab5-ad1a-d67eadc2d717">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#58:
+                                        <!-- -->Limit - Triple Stud (Razz, Stud, Stud Hi-Lo)</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/05ea9391-521a-409c-aeca-7f3f3d15ba9f">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#59:
+                                        <!-- -->NL Hold'em</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/07989e47-e5ab-418d-b27a-e92cae10803c">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#60:
+                                        <!-- -->Single Day High Roller - 8 Max</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/2b81c0fb-36e8-4890-a828-f9720fc9d56f">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#61:
+                                        <!-- -->Satellite to Zodiac Classic - 5 Seat GTD (Win Your Seat @ 210,000 Chips)
+                                    </div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/7913b4ef-7258-4b3e-8cfd-cf4622806e57">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#62:
+                                        <!-- -->Satellite to APT High Roller - 1 Seat GTD (Win Your Seat @ 90,000 Chips)
+                                    </div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/90012c99-84d1-4cb6-8160-9ccc5f7f8433">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#63:
+                                        <!-- -->Turbo</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/b24c14c9-110f-4c4d-b77a-d84f460462e7">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#64:
+                                        <!-- -->Zodiac Classic - Sponsored by Natural8 - Day 1 - VND 5,000,000,000 GTD
+                                    </div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/ab27448f-66f4-4bfc-bf59-cb2fd7707aac">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#65:
+                                        <!-- -->Turbo - NL Omaha High - 5 Card</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/fd39c7e8-40f5-46cc-a812-5c8f140fdd3d">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#66:
+                                        <!-- -->Hyper Turbo - Bomb Pot (1BB Pre Flop Per Player)</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/f243aef9-4263-41b0-814a-63e30e56de8c">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">APT Players Party
+                                    </div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/e4fc9b1e-4982-40ef-84ae-500a9349f968">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#67:
+                                        <!-- -->Super Hyper Turbo </div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/6ab241be-114d-4c2b-b96a-7ed33ea7b73e">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#68:
+                                        <!-- -->Double Stack - Flight A - VND 5,000,000,000 GTD</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/bc609b52-12c9-4774-bcaf-6de81eeacb79">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#26:
+                                        <!-- -->APT Main Event - Day 3 - VND 25,000,000,000 GTD</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/3f08b3fd-e4d5-4026-b4ab-fa08860f9dab">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#64:
+                                        <!-- -->Zodiac Classic - Sponsored by Natural8 - Final Day - VND 5,000,000,000
+                                        GTD</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/49e944c9-f18d-405e-94b8-d5a81510cbf1">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#69:
+                                        <!-- -->Six Game - (Razz, Omaha Hi-Lo, 7 Stud, Stud Hi-Lo, PL Omaha, NLH) - 8
+                                        Max</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/00788a35-dac9-4cef-a3b1-2b9b9644f0ef">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#70:
+                                        <!-- -->PL Omaha Hi-Lo - 5 Card (Big O) - 8 Max</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/1c4898a5-b804-4c96-b33a-46eb16eb8774">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#71:
+                                        <!-- -->Single Day High Roller - 8 Max</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/c71ebd56-e3bb-4763-8693-1a0880598bd7">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#68:
+                                        <!-- -->Double Stack - Flight B - VND 5,000,000,000 GTD</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/43b6cb35-fdf6-4d14-a132-27ca1d72a98c">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#72:
+                                        <!-- -->Turbo</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/6cacdffe-677f-43fd-92bb-c8e4e3be234f">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#73:
+                                        <!-- -->Turbo - NL Single Draw Mix (A-5, 2-7)</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/a634bb73-5b94-4ea0-b9cf-48d562f68915">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#74:
+                                        <!-- -->Turbo - High Roller</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/fd8a1bf0-1f40-4de3-bf01-bb25d03dea2a">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#75:
+                                        <!-- -->Tick Tock BOOM! (Levels Decrease Every Hour 15/10/5/2)</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/7374b669-1c82-4b3f-859d-45d682b67d4d">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#76:
+                                        <!-- -->Super Hyper Turbo </div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/472624c5-5c1f-4dbb-89df-6e09ecc71d26">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#77:
+                                        <!-- -->Mini Main Event - Flight A - VND 3,500,000,000 GTD</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/5b4d7be8-94b5-45cb-859c-f91268dd8cd2">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#26:
+                                        <!-- -->APT Main Event - Final Day - VND 25,000,000,000 GTD</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/57f7ea63-e8e0-4a96-8083-6a7b2f2c262e">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#68:
+                                        <!-- -->Double Stack - Final Day - VND 5,000,000,000 GTD</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/f5ef40c1-162e-4bbb-8fc8-ff780db9d60d">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#78:
+                                        <!-- -->Dealer's Choice (19 Games) - 7 Max </div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/34e05b89-131a-45d8-87c6-2405a3bdc027">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#79:
+                                        <!-- -->APT High Roller - 8 Max - Day 1 - VND 5,000,000,000 GTD</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/07308d75-0e04-400d-ab94-63237ecea69a">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#80:
+                                        <!-- -->NL Hold'em - Freezeout</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/9fb0d835-f670-4d2b-a993-69c4eddd19de">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#81:
+                                        <!-- -->Omaholic (Omaha High - PL Pre / NL Post) - Sponsored by Natural8</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/f92ba33f-d724-4ce4-baaa-ccfd05e42aca">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#77:
+                                        <!-- -->Mini Main Event - Flight B - VND 3,500,000,000 GTD</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/79bed353-d7b8-40a4-bfd8-e3efbdf00559">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#82:
+                                        <!-- -->Turbo - Win the Button</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/45aa6fd6-ff9a-4cee-88d3-204f6b01b17f">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#83:
+                                        <!-- -->Turbo - NL - Seven Game (Badugi Single Draw, Stud Hi-Lo, Razz, Omaha
+                                        Hi-Lo, 7 Stud, 2-7 Single Draw, Omaha Hi) - 7 Max</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/ede98b57-bccd-4073-a552-5bcd7eddb9e0">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#84:
+                                        <!-- -->Hyper Turbo </div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/c12f2547-f3ec-4c22-ac44-5d9965851fb8">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#85:
+                                        <!-- -->Super Hyper Turbo - Super Hold'em - Bomb Pot (1BB Pre Flop per Player)
+                                    </div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/4f787c45-27b1-44cd-97e3-8fc1fab822d7">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#86:
+                                        <!-- -->Micro Main Event</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/6d69d57d-551f-4441-bc58-1e8ccdd08948">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#79:
+                                        <!-- -->APT High Roller - 8 Max - Final Day - VND 5,000,000,000 GTD</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/1a03e038-1d34-4d87-9742-130425931701">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#77:
+                                        <!-- -->Mini Main Event - Final Day - VND 3,500,000,000 GTD</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/d7ad38b0-2031-4b5a-af79-1aed2b64a390">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#87:
+                                        <!-- -->Nine Game - 7 Max (NLH, Stud, Omaha Hi-Lo, Razz, PL Omaha, L Hold'em, NL
+                                        2-7, Stud Hi-Lo, 2-7 Triple Draw)</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/220d55f4-098b-48a6-a474-ea2476a2b8e6">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#88:
+                                        <!-- -->Last Chance High Roller - 8 Max - VND 2,000,000,000 GTD</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/71e504c2-ac2d-4d5c-9c97-1764a87b6bc2">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#89:
+                                        <!-- -->PL Omaha High / Hi-Lo Mix - 5 Card - 8 Max</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/fc84cb17-b701-44a3-92f5-d4720640a39c">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#90:
+                                        <!-- -->Turbo - Short Deck - Double Chance</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/8106fad3-3028-485d-b434-e30b2cbf9e7d">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#91:
+                                        <!-- -->Turbo</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/bbb407d0-9a3b-49ae-9119-f2f756772d58">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#92:
+                                        <!-- -->Turbo - High Roller</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/84e6c49c-d3eb-496b-b9a7-00566a1993e7">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#93:
+                                        <!-- -->Turbo - NL Single Draw - High</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/78f74198-9fd9-45dc-8fc9-d128bb11f25a">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#94:
+                                        <!-- -->Tick Tock BOOM! (Levels Decrease Every Hour 15/10/5/2)</div>
+                                </a><a hreflang="en"
+                                    href="/en/series/apt-hanoi-billions-2023/events/fd0f04d8-0f42-4a75-85a3-b210b5f14210">
+                                    <div class="p-2 pr-6 border-b border-black hover:text-gold-light">#95:
+                                        <!-- -->Hyper Turbo - High Roller</div>
+                                </a></div>
+                        </div>
+                        <div
+                            class="rounded w-full md:w-2/5 md:max-w-[380px] md:backdrop-blur-lg relative md:absolute top-0 md:top-4 right-0">
+                            <div class="overflow-hidden rounded-lg bg-zinc-800/50 md:bg-transparent">
+                                <div class="flex justify-between p-4 py-2 pb-0 bg-transparent md:pb-2 md:bg-black/50">
+                                    <div class="">
+                                        <h6 class="hidden font-sans text-sm text-zinc-400 md:block">Status</h6>
+                                        <p class="text-sm font-medium text-green-500 sm:text-base md:text-xl">Reg Open
+                                        </p>
+                                    </div>
+                                    <div class="flex items-center gap-1 text-right md:block">
+                                        <h6 class="font-sans text-xs md:text-sm text-zinc-400">Starts at</h6>
+                                        <div class="text-xs font-medium sm:text-sm md:text-base">
+                                            <p>10:30 AM</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="px-4 py-2 bg-transparent md:bg-zinc-700">
+                                    <div class="flex justify-between font-sans text-xs md:text-sm text-zinc-400">
+                                        <div>
+                                            <p class="font-medium text-zinc-400">Buy-in:&nbsp;<span
+                                                    class="text-white">TBA</span></p>
+                                        </div>
+                                        <div class="flex items-center gap-1">
+                                            <p class="font-medium text-zinc-400">Closes:&nbsp;<span
+                                                    class="text-white">10:30 AM
+                                                    <!-- --> </span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative w-full mt-2">
+                        <div class="relative w-full mt-2">
+                            <nav
+                                class="relative flex gap-6 px-1 pr-6 overflow-x-scroll text-sm no-scrollbar flex-nowrap whitespace-nowrap md:flex-wrap text-zinc-300 md:text-base">
+                                <a hreflang="en"
+                                    class="relative pb-3 text-xs font-medium uppercase border-b hover:text-gold-light md:px-2 md:text-sm text-gold-light border-gold-light"
+                                    href="/en/series/apt-hanoi-billions-2023/events/22035bca-b1c7-4c4e-8296-9ff2d1d670fb">Overview</a><a
+                                    hreflang="en"
+                                    class="relative pb-3 text-xs font-medium uppercase hover:text-gold-light md:px-2 md:text-sm"
+                                    href="/en/series/apt-hanoi-billions-2023/events/22035bca-b1c7-4c4e-8296-9ff2d1d670fb/results">Payouts</a>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <section class="py-8">
+                <div class="grid grid-cols-1 gap-0 md:grid-cols-5 gap-y-8 md:gap-8">
+                    <div class="order-2 col-span-3 md:order-1">
+                        <p class="mb-4 text-sm font-medium uppercase text-zinc-400">Structure</p>
+                        <div class="overflow-hidden border rounded border-zinc-800">
+                            <div class="grid grid-cols-5 font-medium border-b bg-zinc-900 border-gold">
+                                <div class="p-3">
+                                    <p>Level</p>
+                                </div>
+                                <div class="p-3">
+                                    <p>Duration</p>
+                                </div>
+                                <div class="p-3">
+                                    <p>Small Blind</p>
+                                </div>
+                                <div class="p-3">
+                                    <p>Big Blind</p>
+                                </div>
+                                <div class="p-3">
+                                    <p>Ante</p>
+                                </div>
+                            </div>
+                            <div class="grid border-b bg-zinc-800 border-zinc-900 place-items-center">
+                                <div class="px-3 py-2 font-sans text-sm font-medium text-zinc-400">60 Minutes Break
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-5 border-b bg-zinc-900 border-zinc-800/40 ">
+                                <div class="px-3 py-2">1</div>
+                                <div class="px-3 py-2">10 min</div>
+                                <div class="px-3 py-2">100</div>
+                                <div class="px-3 py-2">200</div>
+                                <div class="px-3 py-2">200</div>
+                            </div>
+                            <div class="grid grid-cols-5 border-b bg-zinc-900 border-zinc-800/40 ">
+                                <div class="px-3 py-2">2</div>
+                                <div class="px-3 py-2">10 min</div>
+                                <div class="px-3 py-2">100</div>
+                                <div class="px-3 py-2">300</div>
+                                <div class="px-3 py-2">300</div>
+                            </div>
+                            <div class="grid grid-cols-5 border-b bg-zinc-900 border-zinc-800/40 ">
+                                <div class="px-3 py-2">3</div>
+                                <div class="px-3 py-2">10 min</div>
+                                <div class="px-3 py-2">200</div>
+                                <div class="px-3 py-2">300</div>
+                                <div class="px-3 py-2">300</div>
+                            </div>
+                            <div class="grid grid-cols-5 border-b bg-zinc-900 border-zinc-800/40 ">
+                                <div class="px-3 py-2">4</div>
+                                <div class="px-3 py-2">10 min</div>
+                                <div class="px-3 py-2">200</div>
+                                <div class="px-3 py-2">400</div>
+                                <div class="px-3 py-2">400</div>
+                            </div>
+                            <div class="grid grid-cols-5 border-b bg-zinc-900 border-zinc-800/40 ">
+                                <div class="px-3 py-2">5</div>
+                                <div class="px-3 py-2">10 min</div>
+                                <div class="px-3 py-2">200</div>
+                                <div class="px-3 py-2">500</div>
+                                <div class="px-3 py-2">500</div>
+                            </div>
+                            <div class="grid grid-cols-5 border-b bg-zinc-900 border-zinc-800/40 ">
+                                <div class="px-3 py-2">6</div>
+                                <div class="px-3 py-2">10 min</div>
+                                <div class="px-3 py-2">300</div>
+                                <div class="px-3 py-2">600</div>
+                                <div class="px-3 py-2">600</div>
+                            </div>
+                            <div class="grid grid-cols-5 border-b bg-zinc-900 border-zinc-800/40 ">
+                                <div class="px-3 py-2">7</div>
+                                <div class="px-3 py-2">10 min</div>
+                                <div class="px-3 py-2">400</div>
+                                <div class="px-3 py-2">800</div>
+                                <div class="px-3 py-2">800</div>
+                            </div>
+                            <div class="grid border-b bg-zinc-800 border-zinc-900 place-items-center">
+                                <div class="px-3 py-2 font-sans text-sm font-medium text-zinc-400">15 Minutes Break
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-5 border-b bg-zinc-900 border-zinc-800/40 ">
+                                <div class="px-3 py-2">8</div>
+                                <div class="px-3 py-2">10 min</div>
+                                <div class="px-3 py-2">500</div>
+                                <div class="px-3 py-2">1,000</div>
+                                <div class="px-3 py-2">1,000</div>
+                            </div>
+                            <div class="grid grid-cols-5 border-b bg-zinc-900 border-zinc-800/40 ">
+                                <div class="px-3 py-2">9</div>
+                                <div class="px-3 py-2">10 min</div>
+                                <div class="px-3 py-2">1,000</div>
+                                <div class="px-3 py-2">1,500</div>
+                                <div class="px-3 py-2">1,500</div>
+                            </div>
+                            <div class="grid grid-cols-5 border-b bg-zinc-900 border-zinc-800/40 ">
+                                <div class="px-3 py-2">10</div>
+                                <div class="px-3 py-2">10 min</div>
+                                <div class="px-3 py-2">1,000</div>
+                                <div class="px-3 py-2">2,000</div>
+                                <div class="px-3 py-2">2,000</div>
+                            </div>
+                            <div class="grid grid-cols-5 border-b bg-zinc-900 border-zinc-800/40 ">
+                                <div class="px-3 py-2">11</div>
+                                <div class="px-3 py-2">10 min</div>
+                                <div class="px-3 py-2">1,500</div>
+                                <div class="px-3 py-2">3,000</div>
+                                <div class="px-3 py-2">3,000</div>
+                            </div>
+                            <div class="grid grid-cols-5 border-b bg-zinc-900 border-zinc-800/40 ">
+                                <div class="px-3 py-2">12</div>
+                                <div class="px-3 py-2">10 min</div>
+                                <div class="px-3 py-2">2,000</div>
+                                <div class="px-3 py-2">4,000</div>
+                                <div class="px-3 py-2">4,000</div>
+                            </div>
+                            <div class="grid grid-cols-5 border-b bg-zinc-900 border-zinc-800/40 ">
+                                <div class="px-3 py-2">13</div>
+                                <div class="px-3 py-2">10 min</div>
+                                <div class="px-3 py-2">2,500</div>
+                                <div class="px-3 py-2">5,000</div>
+                                <div class="px-3 py-2">5,000</div>
+                            </div>
+                            <div class="grid grid-cols-5 border-b bg-zinc-900 border-zinc-800/40 ">
+                                <div class="px-3 py-2">14</div>
+                                <div class="px-3 py-2">10 min</div>
+                                <div class="px-3 py-2">3,000</div>
+                                <div class="px-3 py-2">6,000</div>
+                                <div class="px-3 py-2">6,000</div>
+                            </div>
+                            <div class="grid grid-cols-5 border-b bg-zinc-900 border-zinc-800/40 ">
+                                <div class="px-3 py-2">15</div>
+                                <div class="px-3 py-2">10 min</div>
+                                <div class="px-3 py-2">4,000</div>
+                                <div class="px-3 py-2">8,000</div>
+                                <div class="px-3 py-2">8,000</div>
+                            </div>
+                            <div class="grid grid-cols-5 border-b bg-zinc-900 border-zinc-800/40 ">
+                                <div class="px-3 py-2">16</div>
+                                <div class="px-3 py-2">10 min</div>
+                                <div class="px-3 py-2">5,000</div>
+                                <div class="px-3 py-2">10,000</div>
+                                <div class="px-3 py-2">10,000</div>
+                            </div>
+                            <div class="grid grid-cols-5 border-b bg-zinc-900 border-zinc-800/40 ">
+                                <div class="px-3 py-2">17</div>
+                                <div class="px-3 py-2">10 min</div>
+                                <div class="px-3 py-2">8,000</div>
+                                <div class="px-3 py-2">16,000</div>
+                                <div class="px-3 py-2">16,000</div>
+                            </div>
+                            <div class="grid border-b bg-zinc-800 border-zinc-900 place-items-center">
+                                <div class="px-3 py-2 font-sans text-sm font-medium text-zinc-400">15 Minutes Break
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-5 border-b bg-zinc-900 border-zinc-800/40 ">
+                                <div class="px-3 py-2">18</div>
+                                <div class="px-3 py-2">10 min</div>
+                                <div class="px-3 py-2">10,000</div>
+                                <div class="px-3 py-2">20,000</div>
+                                <div class="px-3 py-2">20,000</div>
+                            </div>
+                            <div class="grid grid-cols-5 border-b bg-zinc-900 border-zinc-800/40 ">
+                                <div class="px-3 py-2">19</div>
+                                <div class="px-3 py-2">10 min</div>
+                                <div class="px-3 py-2">15,000</div>
+                                <div class="px-3 py-2">30,000</div>
+                                <div class="px-3 py-2">30,000</div>
+                            </div>
+                            <div class="grid grid-cols-5 border-b bg-zinc-900 border-zinc-800/40 ">
+                                <div class="px-3 py-2">20</div>
+                                <div class="px-3 py-2">10 min</div>
+                                <div class="px-3 py-2">20,000</div>
+                                <div class="px-3 py-2">40,000</div>
+                                <div class="px-3 py-2">40,000</div>
+                            </div>
+                            <div class="grid grid-cols-5 border-b bg-zinc-900 border-zinc-800/40 ">
+                                <div class="px-3 py-2">21</div>
+                                <div class="px-3 py-2">10 min</div>
+                                <div class="px-3 py-2">25,000</div>
+                                <div class="px-3 py-2">50,000</div>
+                                <div class="px-3 py-2">50,000</div>
+                            </div>
+                            <div class="grid grid-cols-5 border-b bg-zinc-900 border-zinc-800/40 ">
+                                <div class="px-3 py-2">22</div>
+                                <div class="px-3 py-2">10 min</div>
+                                <div class="px-3 py-2">30,000</div>
+                                <div class="px-3 py-2">60,000</div>
+                                <div class="px-3 py-2">60,000</div>
+                            </div>
+                            <div class="grid grid-cols-5 border-b bg-zinc-900 border-zinc-800/40 ">
+                                <div class="px-3 py-2">23</div>
+                                <div class="px-3 py-2">10 min</div>
+                                <div class="px-3 py-2">40,000</div>
+                                <div class="px-3 py-2">80,000</div>
+                                <div class="px-3 py-2">80,000</div>
+                            </div>
+                            <div class="grid grid-cols-5 border-b bg-zinc-900 border-zinc-800/40 ">
+                                <div class="px-3 py-2">24</div>
+                                <div class="px-3 py-2">10 min</div>
+                                <div class="px-3 py-2">50,000</div>
+                                <div class="px-3 py-2">100,000</div>
+                                <div class="px-3 py-2">100,000</div>
+                            </div>
+                            <div class="grid grid-cols-5 border-b bg-zinc-900 border-zinc-800/40 ">
+                                <div class="px-3 py-2">25</div>
+                                <div class="px-3 py-2">10 min</div>
+                                <div class="px-3 py-2">80,000</div>
+                                <div class="px-3 py-2">160,000</div>
+                                <div class="px-3 py-2">160,000</div>
+                            </div>
+                            <div class="grid grid-cols-5 border-b bg-zinc-900 border-zinc-800/40 ">
+                                <div class="px-3 py-2">26</div>
+                                <div class="px-3 py-2">10 min</div>
+                                <div class="px-3 py-2">100,000</div>
+                                <div class="px-3 py-2">200,000</div>
+                                <div class="px-3 py-2">200,000</div>
+                            </div>
+                            <div class="grid grid-cols-5 border-b bg-zinc-900 border-zinc-800/40 ">
+                                <div class="px-3 py-2">27</div>
+                                <div class="px-3 py-2">10 min</div>
+                                <div class="px-3 py-2">125,000</div>
+                                <div class="px-3 py-2">250,000</div>
+                                <div class="px-3 py-2">250,000</div>
+                            </div>
+                            <div class="grid border-b bg-zinc-800 border-zinc-900 place-items-center">
+                                <div class="px-3 py-2 font-sans text-sm font-medium text-zinc-400">15 Minutes Break
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-5 border-b bg-zinc-900 border-zinc-800/40 ">
+                                <div class="px-3 py-2">28</div>
+                                <div class="px-3 py-2">10 min</div>
+                                <div class="px-3 py-2">150,000</div>
+                                <div class="px-3 py-2">300,000</div>
+                                <div class="px-3 py-2">300,000</div>
+                            </div>
+                            <div class="grid grid-cols-5 border-b bg-zinc-900 border-zinc-800/40 ">
+                                <div class="px-3 py-2">29</div>
+                                <div class="px-3 py-2">10 min</div>
+                                <div class="px-3 py-2">200,000</div>
+                                <div class="px-3 py-2">400,000</div>
+                                <div class="px-3 py-2">400,000</div>
+                            </div>
+                            <div class="grid grid-cols-5 border-b bg-zinc-900 border-zinc-800/40 ">
+                                <div class="px-3 py-2">30</div>
+                                <div class="px-3 py-2">10 min</div>
+                                <div class="px-3 py-2">250,000</div>
+                                <div class="px-3 py-2">500,000</div>
+                                <div class="px-3 py-2">500,000</div>
+                            </div>
+                            <div class="grid grid-cols-5 border-b bg-zinc-900 border-zinc-800/40 ">
+                                <div class="px-3 py-2">31</div>
+                                <div class="px-3 py-2">10 min</div>
+                                <div class="px-3 py-2">300,000</div>
+                                <div class="px-3 py-2">600,000</div>
+                                <div class="px-3 py-2">600,000</div>
+                            </div>
+                            <div class="grid grid-cols-5 border-b bg-zinc-900 border-zinc-800/40 ">
+                                <div class="px-3 py-2">32</div>
+                                <div class="px-3 py-2">10 min</div>
+                                <div class="px-3 py-2">400,000</div>
+                                <div class="px-3 py-2">800,000</div>
+                                <div class="px-3 py-2">800,000</div>
+                            </div>
+                            <div class="grid grid-cols-5 border-b bg-zinc-900 border-zinc-800/40 ">
+                                <div class="px-3 py-2">33</div>
+                                <div class="px-3 py-2">10 min</div>
+                                <div class="px-3 py-2">500,000</div>
+                                <div class="px-3 py-2">1,000,000</div>
+                                <div class="px-3 py-2">1,000,000</div>
+                            </div>
+                            <div class="grid grid-cols-5 border-b bg-zinc-900 border-zinc-800/40 ">
+                                <div class="px-3 py-2">34</div>
+                                <div class="px-3 py-2">10 min</div>
+                                <div class="px-3 py-2">600,000</div>
+                                <div class="px-3 py-2">1,200,000</div>
+                                <div class="px-3 py-2">1,200,000</div>
+                            </div>
+                            <div class="grid grid-cols-5 border-b bg-zinc-900 border-zinc-800/40 ">
+                                <div class="px-3 py-2">35</div>
+                                <div class="px-3 py-2">10 min</div>
+                                <div class="px-3 py-2">800,000</div>
+                                <div class="px-3 py-2">1,600,000</div>
+                                <div class="px-3 py-2">1,600,000</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order-1 col-span-2 md:order-2">
+                        <p class="mb-4 text-sm font-medium uppercase text-zinc-400">Event Details</p>
+                        <div class="grid grid-cols-2 gap-3">
+                            <div class="inline-block p-4 border rounded border-zinc-800 bg-zinc-900">
+                                <h6 class="font-sans text-sm text-zinc-400">Date</h6>
+                                <p class="text-base font-medium">1 Dec 2023</p>
+                            </div>
+                            <div class="inline-block p-4 border rounded border-zinc-800 bg-zinc-900">
+                                <h6 class="font-sans text-sm text-zinc-400">Start Time</h6>
+                                <p class="text-base font-medium">10:30 AM</p>
+                            </div>
+                            <div class="inline-block p-4 border rounded border-zinc-800 bg-zinc-900">
+                                <h6 class="font-sans text-sm text-zinc-400">Registration Ends</h6>
+                                <p class="text-base font-medium">Closed</p>
+                            </div>
+                            <div class="inline-block p-4 border rounded border-zinc-800 bg-zinc-900">
+                                <h6 class="font-sans text-sm text-zinc-400">Starting Stack</h6>
+                                <p class="text-base font-medium">10,000</p>
+                            </div>
+                        </div>
+                        <p class="mt-8 mb-4 text-sm font-medium uppercase text-zinc-400">Buy-In Breakdown</p>
+                        <div class="w-full mb-8 overflow-hidden border rounded border-zinc-800 bg-zinc-900">
+                            <div class="flex items-center justify-between p-4 bg-zinc-800">
+                                <h6 class="font-sans text-sm text-zinc-400">Total Buy-in</h6>
+                                <p class="text-base font-medium text-gold">VND 0</p>
+                            </div>
+                            <div class="flex items-center justify-between p-4 border-b border-zinc-800/40 ">
+                                <h6 class="flex items-center gap-2 font-sans text-sm text-zinc-400">Prize Pool</h6>
+                                <p class="text-sm font-medium">VND 0</p>
+                            </div>
+                            <div class="flex items-center justify-between p-4 border-b border-zinc-800/40">
+                                <h6 class="flex items-center gap-2 font-sans text-sm text-zinc-400">Entry Fee</h6>
+                                <p class="text-sm font-medium">VND 0</p>
+                            </div>
+                            <div class="flex items-center justify-between p-4 ">
+                                <h6 class="flex items-center gap-2 font-sans text-sm text-zinc-400">Staff Charge
+                                </h6>
+                                <p class="text-sm font-medium">3%</p>
+                            </div>
+                        </div>
+                        <div class="">
+                            <div
+                                class="p-4 mt-4 prose rounded-md bg-zinc-500/20 prose-invert prose-headings:font-sans prose-ul:list-disc prose-ul:list-outside prose-base">
+                                <h6>Hoãn lại đến Thứ Hai / Postponed to Monday - December 4, 2023 @ 14:00</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="mt-24 bg-zinc-900" aria-labelledby="footer-heading">
+        <h2 id="footer-heading" class="sr-only">Footer</h2>
+        <div class="container px-4 py-12 mx-auto md:px-0 lg:py-16">
+            <div class="lg:flex lg:items-center lg:justify-between xl:mt-0">
+                <div>
+                    <h5 class="text-white emailSent peer">Subscribe to the APT newsletter</h5>
+                    <p class="mt-2 text-zinc-300">Be the first to get the latest results, promotions, news and more!</p>
+                </div>
+                <div>
+                    <form class="mt-4 sm:flex sm:max-w-md lg:mt-0" accept-charset="UTF-8"><label for="email-address"
+                            class="sr-only">Email address</label><input type="email" id="signup_email"
+                            autocomplete="email" required=""
+                            class="w-full min-w-0 px-4 py-2 text-base bg-white border border-transparent appearance-none text-zinc-900 placeholder-zinc-500 focus:border-white focus:placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-zinc-800 sm:max-w-xs"
+                            placeholder="Enter your email" name="signup[email]">
+                        <div class="mt-3 sm:mt-0 sm:ml-3 sm:flex-shrink-0"><input type="submit"
+                                class="flex items-center justify-center w-full px-4 py-2 text-base font-medium text-white border border-transparent bg-crimson hover:brightness-90 focus:outline-none"
+                                value="Submit"></div>
+                    </form>
+                    <p class="invisible mt-3">Thank you! Please check your email for the confirmation link</p>
+                </div>
+            </div>
+            <div class="h-px mt-12 bg-gold-dark"></div>
+            <div class="mt-12 md:flex md:items-center md:justify-between">
+                <div class="flex space-x-6 md:order-2"><a target="_blank" rel="noreferrer"
+                        href="https://www.facebook.com/asianpokertour" id="footer-Facebook"
+                        class="text-zinc-400 hover:text-zinc-300"><span class="sr-only">Facebook</span><svg
+                            fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6" aria-hidden="true">
+                            <path fill-rule="evenodd"
+                                d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                                clip-rule="evenodd"></path>
+                        </svg></a><a target="_blank" rel="noreferrer" href="https://www.instagram.com/asianpokertour"
+                        id="footer-Instagram" class="text-zinc-400 hover:text-zinc-300"><span
+                            class="sr-only">Instagram</span><svg fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6"
+                            aria-hidden="true">
+                            <path fill-rule="evenodd"
+                                d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+                                clip-rule="evenodd"></path>
+                        </svg></a><a target="_blank" rel="noreferrer" href="https://twitter.com/AsianPokerTour"
+                        id="footer-Twitter" class="text-zinc-400 hover:text-zinc-300"><span
+                            class="sr-only">Twitter</span><svg fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6"
+                            aria-hidden="true">
+                            <path
+                                d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84">
+                            </path>
+                        </svg></a><a target="_blank" rel="noreferrer" href="https://www.twitch.com/asianpokertourlive"
+                        id="footer-Twitch" class="text-zinc-400 hover:text-zinc-300"><span
+                            class="sr-only">Twitch</span><svg viewBox="0 -2 34 34" fill="currentColor" class="w-6 h-6"
+                            aria-hidden="true">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M27.4994 15.3919L22.5006 20.1262H17.4994L13.1233 24.2708V20.1262H7.49939V2.36833H27.4994V15.3919ZM6.24909 0L0 5.91853V27.2289H7.49939V33.1475L13.7485 27.2289H18.7497L30 16.5737V0H6.24909ZM23.7509 6.69873H21.2502V13.8008H23.7509V6.69873ZM14.3766 6.6709H16.8773V13.7739H14.3766V6.6709Z">
+                            </path>
+                        </svg></a><a target="_blank" rel="noreferrer" href="https://linktr.ee/asianpokertour"
+                        id="footer-Linktree" class="text-zinc-400 hover:text-zinc-300"><span
+                            class="sr-only">Linktree</span><svg fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6"
+                            aria-hidden="true">
+                            <path
+                                d="m13.511 5.853 4.005-4.117 2.325 2.381-4.201 4.005h5.909v3.305h-5.937l4.229 4.108-2.325 2.334-5.741-5.769-5.741 5.769-2.325-2.325 4.229-4.108H2V8.122h5.909L3.708 4.117l2.325-2.381 4.005 4.117V0h3.473v5.853zM10.038 16.16h3.473v7.842h-3.473V16.16z">
+                            </path>
+                        </svg></a><a target="_blank" rel="noreferrer" href="https://www.youtube.com/theasianpokertour"
+                        id="footer-YouTube" class="text-zinc-400 hover:text-zinc-300"><span
+                            class="sr-only">YouTube</span><svg fill="currentColor" viewBox="0 0 310 310" class="w-6 h-6"
+                            aria-hidden="true">
+                            <g>
+                                <path id="XMLID_823_"
+                                    d="M297.917,64.645c-11.19-13.302-31.85-18.728-71.306-18.728H83.386c-40.359,0-61.369,5.776-72.517,19.938 C0,79.663,0,100.008,0,128.166v53.669c0,54.551,12.896,82.248,83.386,82.248h143.226c34.216,0,53.176-4.788,65.442-16.527 C304.633,235.518,310,215.863,310,181.835v-53.669C310,98.471,309.159,78.006,297.917,64.645z M199.021,162.41l-65.038,33.991 c-1.454,0.76-3.044,1.137-4.632,1.137c-1.798,0-3.592-0.484-5.181-1.446c-2.992-1.813-4.819-5.056-4.819-8.554v-67.764 c0-3.492,1.822-6.732,4.808-8.546c2.987-1.814,6.702-1.938,9.801-0.328l65.038,33.772c3.309,1.718,5.387,5.134,5.392,8.861 C204.394,157.263,202.325,160.684,199.021,162.41z">
+                                </path>
+                            </g>
+                        </svg></a></div>
+                <div class="mt-8 md:mt-0 md:flex md:items-center md:gap-4"><img alt="APT Logo" loading="lazy"
+                        width="255" height="64" decoding="async" data-nimg="1" style="color:transparent"
+                        srcset="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.122a4e82.png&amp;w=256&amp;q=75 1x, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.122a4e82.png&amp;w=640&amp;q=75 2x"
+                        src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.122a4e82.png&amp;w=640&amp;q=75">
+                    <div>
+                        <p class="mt-4 text-base md:mt-0 text-zinc-400 md:order-1">©
+                            <!-- -->2023
+                            <!-- --> Asian Poker Tour.
+                            <!-- -->All rights reserved.</p><a
+                            href="https://archives.theasianpokertour.com/theasianpokertour-com-terms-and-conditions/"
+                            class="text-zinc-400 hover:text-zinc-200" target="_blank" rel="noreferrer">Terms and
+                            Conditions</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./assets/js/Js-Custom/menu.e4ab7891.js" crossorigin="anonymous" type="module" defer="defer">
+    </script>
+
+    <script src="./assets/js/Js-Custom/locale_detected.a9492a68.js" crossorigin="anonymous" type="module"
+        fetchpriority="high" defer="defer">
+    </script>
+
+    <script src="./assets/js/Js-Custom/notification.a3be2d7f.js" crossorigin="anonymous" type="module"
+        fetchpriority="high" defer="defer">
+    </script>
+
+    <script src="./assets/js/Js-Custom/header.f54d69f3.js" crossorigin="anonymous" type="module" fetchpriority="high"
+        defer="defer">
+    </script>
+</body>
+
+</html>
