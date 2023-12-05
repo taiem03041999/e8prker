@@ -34536,7 +34536,7 @@ div.table-rose-900.table-border th {
     order: 3
 }
 
-.col-span-1 {
+.col-span-1-special {
     grid-column: span 1/span 1
 }
 

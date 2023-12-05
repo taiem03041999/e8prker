@@ -3854,7 +3854,7 @@ body {
 
 @media (min-width:640px) {
     .sm\:col-span-1 {
-        grid-column: span 1/span 1
+        grid-column: span 1/span 1 !important
     }
 
     .sm\:-mx-6 {
@@ -4146,7 +4146,7 @@ body {
     }
 
     .md\:justify-end {
-        justify-content: flex-end
+        justify-content: flex-end !important
     }
 
     .md\:justify-between {
