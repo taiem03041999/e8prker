@@ -362,6 +362,13 @@ video {
     padding-left: 1rem
 }
 
+@media (max-width: 640px) {
+    .container-special {
+        padding-right: 1rem;
+        padding-left: 1rem
+    }
+}
+
 @media (min-width: 640px) {
     .container-special {
         max-width: 640px;
