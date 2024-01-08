@@ -3458,6 +3458,8 @@ header.header-scrolled {
   .menu-list>div .dropdown.dropdown-full,
   .menu-list>li .dropdown.dropdown-full {
     left: calc(-50vw + 628px - 10%);
+    left: 50%;
+    transform: translateX(-50%) !important;
   }
 }
 
@@ -3746,6 +3748,8 @@ header.header-scrolled .menu-list>li .dropdown {
   .mobile-menu-category-content>nav>div .dropdown.dropdown-full,
   .mobile-menu-category-content>nav>li .dropdown.dropdown-full {
     left: calc(-50vw + 628px - 10%);
+    left: 50%;
+    transform: translateX(-50%) !important;
   }
 }
 

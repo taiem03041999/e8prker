@@ -22,6 +22,22 @@
     &-wrapper {
         position: relative;
         z-index: 2;
+
+        &__flexStart {
+            @include flexBox(top);
+            justify-content: center;
+            flex-flow: row wrap;
+        }
+
+        &__item {
+            max-width: 23%;
+            width: 23%;
+            margin-bottom: 15px;
+
+            & + & {
+                margin-left: 15px;
+            }
+        }
     }
 
     &-text {

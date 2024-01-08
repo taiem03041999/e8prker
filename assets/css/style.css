@@ -34,6 +34,19 @@
   .intro-wrapper {
     position: relative;
     z-index: 2; }
+    .intro-wrapper__flexStart {
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      flex-flow: row wrap; }
+    .intro-wrapper__item {
+      max-width: 23%;
+      width: 23%;
+      margin-bottom: 15px; }
+      .intro-wrapper__item + .intro-wrapper__item {
+        margin-left: 15px; }
   .intro-text__seemore {
     padding: 0.4rem 3.25rem; }
     @media only screen and (max-width: 63.9375em) {
