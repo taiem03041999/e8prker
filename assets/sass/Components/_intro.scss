@@ -179,6 +179,52 @@
             }
         }
     }
+
+    &-cover {
+        &__custom {
+            &:nth-child(1) {
+                max-width: 310px;
+                left: 0;
+                top: 0;
+            }
+
+            &:nth-child(2) {
+                max-width: 300px;
+                top: -10%;
+                right: 0;
+            }
+
+            &:nth-child(3) {
+                max-width: 455px;
+                right: 0;
+                bottom: 0;
+            }
+
+            &:nth-child(4) {
+                max-width: 230px;
+                left: -10%;
+                bottom: 0;
+
+                @include responsive_fit {
+                    left: -25%;
+                }
+            }
+
+            @include responsive_bothTM {
+                position: relative;
+                max-width: 100% !important;
+                margin: 0 10px;
+                left: initial !important;
+                right: initial;
+                top: initial;
+                bottom: initial !important;
+
+                & + & {
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
 }
 
 body.active {

@@ -160,6 +160,38 @@
       transition: all 0.3s; }
       .intro-popup__btn:hover {
         background: var(--Linear, linear-gradient(90deg, #00d100 -0.02%, #32b4b2 99.98%)); }
+  .intro-cover__custom:nth-child(1) {
+    max-width: 310px;
+    left: 0;
+    top: 0; }
+  .intro-cover__custom:nth-child(2) {
+    max-width: 300px;
+    top: -10%;
+    right: 0; }
+  .intro-cover__custom:nth-child(3) {
+    max-width: 455px;
+    right: 0;
+    bottom: 0; }
+  .intro-cover__custom:nth-child(4) {
+    max-width: 230px;
+    left: -10%;
+    bottom: 0; }
+    @media only screen and (max-width: 1440px) {
+      .intro-cover__custom:nth-child(4) {
+        left: -25%; } }
+  @media only screen and (max-width: 63.9375em) {
+    .intro-cover__custom {
+      position: relative;
+      max-width: 100% !important;
+      margin: 0 10px;
+      left: initial !important;
+      right: initial;
+      top: initial;
+      bottom: initial !important; }
+      .intro-cover__custom .hide-on-bothTM {
+        display: none !important; }
+      .intro-cover__custom + .intro-cover__custom {
+        margin-top: 10px; } }
 
 body.active {
   overflow-y: hidden; }
