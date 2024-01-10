@@ -224,6 +224,14 @@
                 }
             }
         }
+
+        &__wrap {
+            padding: 100px 0;
+
+            @include responsive_bothTM {
+                padding: 0;
+            }
+        }
     }
 }
 
