@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "flowbite": "^2.2.1",
     "node-sass": "^4.14.1"
   }
 }
