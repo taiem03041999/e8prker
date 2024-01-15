@@ -1400,14 +1400,10 @@
                         </div>
                     </div>
 
-                    <div class="flex items-center gap-2 xl:gap-4">
-                        <!-- <a id="header-cta-download"
-                            class="text-sm hidden sm:block font-semibold text-pink-600 hover:text-pink-500 font-semibold"
-                            href="#">Download</a> -->
+                    <div class="flex grow lg:hidden"></div>
 
-                        <div>
-                            <button class="btn btn-primary" id="myButton">Button</button>
-                        </div>
+                    <div class="hidden sm:block flex items-center gap-2 xl:gap-4">
+                        <button class="btn btn-primary myButton">Rút / Nạp</button>
                     </div>
 
                     <div class="hidden xl:flex gap-2 xl:gap-4 menu-list">
@@ -1638,6 +1634,10 @@
                                                 <a class="text-sm hover:text-gray-300 cursor-pointer py-4" href="#">Blog
                                                 </a>
                                             </nav>
+
+                                            <div class="flex items-center gap-2 xl:gap-4 intro-popup__margin">
+                                                <button class="btn btn-primary myButton">Nạp / Rút</button>
+                                            </div>
 
                                             <div class="px-3 pb-24">
                                                 <div class="locale-selector">
@@ -3969,7 +3969,7 @@
     </main>
 
     <!-- footer -->
-    <footer class="bg-zinc-900/50 backdrop-blur-lg mt-4 py-24">
+    <footer class="active bg-zinc-900/50 backdrop-blur-lg mt-4 py-24">
         <div class="container mx-auto">
             <div class="grid grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-4">
                 <div class="col-span-2">
@@ -4312,7 +4312,7 @@
     </div>
 
     <!-- Modal Form Click-->
-    <div class="intro-popup active" id="myElement2">
+    <div class="intro-popup" id="myElement2">
         <div class="intro-popup__bg" onclick="popupFunction()"></div>
 
         <div class="intro-popup__wrap">
@@ -4332,6 +4332,12 @@
                 </div>
 
                 <div id="tab1" class="tab-content active-tab">
+                    <select name="" id="" class="intro-popup__select special">
+                        <option disabled selected value="">Chọn cổng nạp</option>
+                        <option value="value1">Option</option>
+                        <option value="value1">Option</option>
+                    </select>
+
                     <input type="text" name="" id="name" placeholder="Tên đăng nhập" class="intro-popup__input"
                         required />
 
@@ -4417,6 +4423,49 @@
         </div>
     </div>
 
+    <!-- Modal success, add active -->
+    <div class="intro-popup">
+        <div class="intro-popup__bg special" onclick="popupFunction()"></div>
+
+        <div class="intro-popup__wrap">
+            <p class="intro-popup__title from-purple-500 text-gradient to-pink-500">Thành công</p>
+
+            <svg width="120px" height="120px" style="margin: 0 auto;" viewBox="0 0 15 15" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5C15 11.6421 11.6421 15 7.5 15C3.35786 15 0 11.6421 0 7.5ZM7.0718 10.7106L11.3905 5.31232L10.6096 4.68762L6.92825 9.2893L4.32012 7.11586L3.67993 7.88408L7.0718 10.7106Z"
+                        fill="#39bd00"></path>
+                </g>
+            </svg>
+
+            <button type="button" onclick="clearAllActive()" class="intro-popup__btn">Xác nhận</button>
+        </div>
+    </div>
+
+    <!-- Modal error, add active -->
+    <div class="intro-popup">
+        <div class="intro-popup__bg special" onclick="popupFunction()"></div>
+
+        <div class="intro-popup__wrap">
+            <p class="intro-popup__title error">Thất bại</p>
+
+            <svg width="120px" height="120px" style="margin: 0 auto;" viewBox="0 0 15 15" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5C15 11.6421 11.6421 15 7.5 15C3.35786 15 0 11.6421 0 7.5ZM7.0718 10.7106L11.3905 5.31232L10.6096 4.68762L6.92825 9.2893L4.32012 7.11586L3.67993 7.88408L7.0718 10.7106Z"
+                        fill="#bd0000"></path>
+                </g>
+            </svg>
+
+            <button type="button" onclick="clearAllActive()" class="intro-popup__btn">Xác nhận</button>
+        </div>
+    </div>
 </body>
 
 <script src="./assets/js/Js-Custom/locale_detected.a9492a68.js" crossorigin="anonymous" type="module"
@@ -4453,7 +4502,7 @@
 </script>
 
 <!-- Auto Modal -->
-<!-- <script>
+<script>
     const isCheckShow = sessionStorage.getItem("isShow");
     setTimeout(function () {
         if (!isCheckShow) {
@@ -4461,32 +4510,27 @@
             document.querySelector('body').classList.add('active');
         }
     }, 3000);
-
-    function popupFunction() {
-        sessionStorage.setItem("isShow", true);
-
-        var element = document.getElementById("intro-popup__id");
-        element.classList.remove("active");
-
-        var elementBody = document.querySelector("body");
-        elementBody.classList.remove("active");
-    }
-</script> -->
+</script>
 
 <!-- Click modal -->
 <script>
-    var myButton = document.getElementById('myButton');
+    var myButton = document.querySelectorAll('.myButton');
     var myElement2 = document.getElementById('myElement2');
 
-    myButton.onclick = function () {
-        myElement2.classList.add('active');
-    };
+    myButton.forEach(item => {
+        item.onclick = function () {
+            myElement2.classList.add('active');
+        };
+    })
 
     function popupFunction() {
         sessionStorage.setItem("isShow", true);
 
         var element = document.getElementById("myElement2");
         element.classList.remove("active");
+
+        var element2 = document.getElementById("intro-popup__id");
+        element2.classList.remove("active");
 
         var elementBody = document.querySelector("body");
         elementBody.classList.remove("active");
@@ -4543,6 +4587,19 @@
         // Thêm lớp active cho nút được click
         var activeButton = document.querySelector('.tabs button[data-tab="' + tabId + '"]');
         activeButton.classList.add('active');
+    }
+</script>
+
+<!-- Clear all -->
+<script>
+    function clearAllActive() {
+        // Lấy tất cả các phần tử có class active
+        var elements = document.querySelectorAll('.active');
+
+        // Duyệt qua từng phần tử và xóa class active
+        elements.forEach(function (element) {
+            element.classList.remove('active');
+        });
     }
 </script>
 

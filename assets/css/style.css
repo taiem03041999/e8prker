@@ -15,6 +15,26 @@
 /* Tablet */
 /* Mobile */
 /* Phone Small */
+/* Ẩn nút tăng giảm trên input số khi focus */
+body.active {
+  overflow-y: hidden; }
+
+/* Style cho nội dung tab hiện tại */
+.tab-content {
+  display: none; }
+
+/* Hiển thị nội dung tab được chọn */
+.active-tab {
+  display: block; }
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0; }
+
+input[type="number"] {
+  -moz-appearance: textfield; }
+
 .intro {
   background-repeat: no-repeat;
   background-size: cover;
@@ -98,6 +118,8 @@
       background-color: rgba(0, 0, 0, 0.5);
       backdrop-filter: blur(2px);
       z-index: 10; }
+      .intro-popup__bg.special {
+        background-color: black; }
     .intro-popup__wrap {
       position: absolute;
       max-width: 400px;
@@ -121,6 +143,9 @@
       display: flex;
       justify-content: center;
       align-items: center; }
+      .intro-popup__logo > img {
+        max-width: 178px;
+        height: auto; }
     .intro-popup__title {
       text-transform: capitalize;
       font-size: 14px;
@@ -173,7 +198,7 @@
       border: 1px solid #9ca3af;
       color: #9ca3af;
       background: transparent; }
-      .intro-popup__tabsBtn.active, .intro-popup__tabsBtn:hover {
+      .intro-popup__tabsBtn.active {
         border-color: #23cc01;
         background: var(--Linear, linear-gradient(90deg, #00d100 -0.02%, #32b4b2 99.98%));
         color: #fff; }
@@ -187,7 +212,8 @@
       border: 1px solid #9ca3af;
       color: #9ca3af;
       border-radius: 3px;
-      transition: all 0.3s; }
+      transition: all 0.3s;
+      padding: 3px; }
       .intro-popup__group:hover {
         color: #fff;
         background: var(--Linear, linear-gradient(90deg, #00d100 -0.02%, #32b4b2 99.98%));
@@ -200,10 +226,27 @@
       padding: 5px; }
       .intro-popup__select:focus-visible {
         outline: none; }
+      .intro-popup__select.special {
+        margin: 0 0 20px 0; }
     .intro-popup__note {
       margin-top: 20px;
       text-align: center;
       color: #fff; }
+    @media only screen and (max-width: 63.9375em) {
+      .intro-popup__margin {
+        margin: 12px; }
+        .intro-popup__margin .hide-on-bothTM {
+          display: none !important; } }
+    .intro-popup__alert {
+      display: none; }
+      .intro-popup__alert.active {
+        display: block; }
+    .intro-popup__title {
+      font-size: 20px;
+      text-transform: uppercase;
+      margin-top: 20px; }
+      .intro-popup__title.error {
+        color: #bd0000; }
   .intro-cover__custom:nth-child(1) {
     max-width: 310px;
     left: 0;
@@ -243,17 +286,6 @@
         padding: 0; }
         .intro-cover__wrap .hide-on-bothTM {
           display: none !important; } }
-
-body.active {
-  overflow-y: hidden; }
-
-/* Style cho nội dung tab hiện tại */
-.tab-content {
-  display: none; }
-
-/* Hiển thị nội dung tab được chọn */
-.active-tab {
-  display: block; }
 
 .banner {
   padding-top: 80px;
