@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* PC Alway  */
 /* PC BIG  */
 /* PC BIG Lower */
@@ -99,7 +100,8 @@
       z-index: 10; }
     .intro-popup__wrap {
       position: absolute;
-      max-width: 405px;
+      max-width: 400px;
+      width: 100%;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
@@ -127,7 +129,7 @@
       line-height: normal;
       margin-bottom: 23px; }
     .intro-popup__input {
-      width: 275px;
+      width: 100%;
       height: 44px;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -137,12 +139,12 @@
       border-radius: 100px;
       background-color: #111111;
       margin: 0 auto;
-      padding: 0 10px;
+      padding: 0 15px;
       box-shadow: 1px 1.5px 4px 0px rgba(0, 0, 0, 0.1) inset, 1px 1.5px 4px 0px rgba(0, 0, 0, 0.08) inset, 0px -0.5px 1px 0px rgba(255, 255, 255, 0.25) inset, 0px -0.5px 1px 0px rgba(255, 255, 255, 0.3) inset; }
       .intro-popup__input + .intro-popup__input {
         margin-top: 15px; }
     .intro-popup__btn {
-      margin: 23px auto 0;
+      margin: 30px auto 0;
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
@@ -168,29 +170,40 @@
     .intro-popup__tabsBtn {
       padding: 5px 10px;
       border-radius: 5px;
-      border: 1px solid #707070;
-      color: #707070;
+      border: 1px solid #9ca3af;
+      color: #9ca3af;
       background: transparent; }
       .intro-popup__tabsBtn.active, .intro-popup__tabsBtn:hover {
         border-color: #23cc01;
-        background: linear-gradient(130deg, #23cc01, #01cc77, #01c5cc, #01cc46);
+        background: var(--Linear, linear-gradient(90deg, #00d100 -0.02%, #32b4b2 99.98%));
         color: #fff; }
     .intro-popup__option {
       display: grid;
       grid-template-columns: repeat(5, 1fr);
       gap: 10px 10px;
-      margin-top: 15px; }
-    .intro-popup__radio {
-      width: 15px;
-      height: 15px;
-      margin-right: 5px; }
+      margin-top: 20px; }
     .intro-popup__group {
-      cursor: pointer;
-      font-size: 14px;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      align-items: center; }
+      text-align: center;
+      border: 1px solid #9ca3af;
+      color: #9ca3af;
+      border-radius: 3px;
+      transition: all 0.3s; }
+      .intro-popup__group:hover {
+        color: #fff;
+        background: var(--Linear, linear-gradient(90deg, #00d100 -0.02%, #32b4b2 99.98%));
+        border-color: #01cc46; }
+    .intro-popup__select {
+      margin-top: 20px;
+      color: #000;
+      border-radius: 5px;
+      width: 100%;
+      padding: 5px; }
+      .intro-popup__select:focus-visible {
+        outline: none; }
+    .intro-popup__note {
+      margin-top: 20px;
+      text-align: center;
+      color: #fff; }
   .intro-cover__custom:nth-child(1) {
     max-width: 310px;
     left: 0;
@@ -233,6 +246,14 @@
 
 body.active {
   overflow-y: hidden; }
+
+/* Style cho nội dung tab hiện tại */
+.tab-content {
+  display: none; }
+
+/* Hiển thị nội dung tab được chọn */
+.active-tab {
+  display: block; }
 
 .banner {
   padding-top: 80px;

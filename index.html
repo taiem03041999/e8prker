@@ -4321,53 +4321,95 @@
             </div>
 
             <form action="" class="intro-popup__form">
-                <div class="intro-popup__tabs">
-                    <button class="intro-popup__tabsBtn active">
+                <div class="intro-popup__tabs tabs">
+                    <button class="intro-popup__tabsBtn active" onclick="changeTab('tab1')" data-tab="tab1">
                         Nạp tiền
                     </button>
 
-                    <button class="intro-popup__tabsBtn">
+                    <button class="intro-popup__tabsBtn" onclick="changeTab('tab2')" data-tab="tab2">
                         Rút tiền
                     </button>
                 </div>
 
-                <div>
-                    <input type="text" name="" id="name" placeholder="Tên đăng nhập" class="intro-popup__input" />
+                <div id="tab1" class="tab-content active-tab">
+                    <input type="text" name="" id="name" placeholder="Tên đăng nhập" class="intro-popup__input"
+                        required />
 
                     <input type="text" name="" id="confirmName" placeholder="Nhập lại tên đăng nhập"
-                        class="intro-popup__input" />
+                        class="intro-popup__input" required />
 
                     <!-- Thông báo kết quả -->
                     <p id="result" style="margin: 15px;"></p>
 
-                    <input type="number" name="" id="" placeholder="Số tiền" class="intro-popup__input" required />
+                    <input type="number" name="" id="" placeholder="Số tiền nạp" class="intro-popup__input" required />
 
                     <div class="intro-popup__option">
-                        <label for="abc1" class="intro-popup__group">
-                            <input type="radio" name="abc" id="abc1" class="intro-popup__radio" checked>
-                            <span>10$</span>
-                        </label>
+                        <button type="button" class="intro-popup__group">
+                            10$
+                        </button>
 
-                        <label for="abc2" class="intro-popup__group">
-                            <input type="radio" name="abc" id="abc2" class="intro-popup__radio">
-                            <span>30$</span>
-                        </label>
+                        <button type="button" class="intro-popup__group">
+                            30$
+                        </button>
 
-                        <label for="abc3" class="intro-popup__group">
-                            <input type="radio" name="abc" id="abc3" class="intro-popup__radio">
-                            <span>50$</span>
-                        </label>
+                        <button type="button" class="intro-popup__group">
+                            50$
+                        </button>
 
-                        <label for="abc4" class="intro-popup__group">
-                            <input type="radio" name="abc" id="abc4" class="intro-popup__radio">
-                            <span>100$</span>
-                        </label>
+                        <button type="button" class="intro-popup__group">
+                            100$
+                        </button>
 
-                        <label for="abc5" class="intro-popup__group">
-                            <input type="radio" name="abc" id="abc5" class="intro-popup__radio">
-                            <span>500$</span>
-                        </label>
+                        <button type="button" class="intro-popup__group">
+                            500$
+                        </button>
                     </div>
+
+                    <select name="" id="" class="intro-popup__select">
+                        <option disabled selected value="">Chọn loại cổng thanh toán</option>
+                        <option value="value1">TRC20</option>
+                    </select>
+                </div>
+
+                <div id="tab2" class="tab-content">
+                    <input type="text" placeholder="Tên đăng nhập" class="intro-popup__input" required />
+
+                    <input type="text" placeholder="Họ và tên" class="intro-popup__input" required />
+
+                    <input type="tel" placeholder="Số điện thoại" class="intro-popup__input" required />
+
+                    <input type="number" name="" id="" placeholder="Số tiền rút" class="intro-popup__input" required />
+
+                    <div class="intro-popup__option">
+                        <button type="button" class="intro-popup__group">
+                            10$
+                        </button>
+
+                        <button type="button" class="intro-popup__group">
+                            30$
+                        </button>
+
+                        <button type="button" class="intro-popup__group">
+                            50$
+                        </button>
+
+                        <button type="button" class="intro-popup__group">
+                            100$
+                        </button>
+
+                        <button type="button" class="intro-popup__group">
+                            500$
+                        </button>
+                    </div>
+
+                    <select name="" id="" class="intro-popup__select">
+                        <option disabled selected value="">Chọn loại cổng thanh toán</option>
+                        <option value="value1">TRC20</option>
+                    </select>
+
+                    <p class="intro-popup__note">
+                        ( lưu ý: Rút tiền USDT chỉ dành cho khách hàng đã xác minh KYC đầy đủ)
+                    </p>
                 </div>
 
                 <button type="submit" class="intro-popup__btn">Xác nhận</button>
@@ -4411,7 +4453,7 @@
 </script>
 
 <!-- Auto Modal -->
-<script>
+<!-- <script>
     const isCheckShow = sessionStorage.getItem("isShow");
     setTimeout(function () {
         if (!isCheckShow) {
@@ -4429,7 +4471,7 @@
         var elementBody = document.querySelector("body");
         elementBody.classList.remove("active");
     }
-</script>
+</script> -->
 
 <!-- Click modal -->
 <script>
@@ -4472,6 +4514,36 @@
     nameInput.oninput = confirmNameInput.oninput = function () {
         resultElement.textContent = ''; // Xóa thông báo khi người dùng bắt đầu nhập lại
     };
+</script>
+
+<script>
+    function changeTab(tabId) {
+        // Ẩn tất cả các tab
+        var tabs = document.getElementsByClassName('tab-content');
+        for (var i = 0; i < tabs.length; i++) {
+            tabs[i].style.display = 'none';
+        }
+
+        // Hiển thị tab được chọn
+        document.getElementById(tabId).style.display = 'block';
+
+        // Đặt tab hiện tại là active
+        var activeTabs = document.getElementsByClassName('active-tab');
+        for (var i = 0; i < activeTabs.length; i++) {
+            activeTabs[i].classList.remove('active-tab');
+        }
+        document.getElementById(tabId).classList.add('active-tab');
+
+        // Xóa lớp active từ tất cả các nút
+        var tabButtons = document.querySelectorAll('.tabs button');
+        for (var i = 0; i < tabButtons.length; i++) {
+            tabButtons[i].classList.remove('active');
+        }
+
+        // Thêm lớp active cho nút được click
+        var activeButton = document.querySelector('.tabs button[data-tab="' + tabId + '"]');
+        activeButton.classList.add('active');
+    }
 </script>
 
 </html>

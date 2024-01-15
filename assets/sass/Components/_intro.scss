@@ -109,7 +109,8 @@
 
         &__wrap {
             position: absolute;
-            max-width: 405px;
+            max-width: 400px;
+            width: 100%;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
@@ -139,14 +140,14 @@
         }
 
         &__input {
-            width: 275px;
+            width: 100%;
             height: 44px;
             @include flexBox(both);
             border-radius: 100px;
             background-color: #111111;
             margin: 0 auto;
 
-            padding: 0 10px;
+            padding: 0 15px;
             box-shadow:
                 1px 1.5px 4px 0px rgba(0, 0, 0, 0.1) inset,
                 1px 1.5px 4px 0px rgba(0, 0, 0, 0.08) inset,
@@ -159,7 +160,7 @@
         }
 
         &__btn {
-            margin: 23px auto 0;
+            margin: 30px auto 0;
             @include flexBox(both);
             border-radius: 100px;
             background: rgba(128, 128, 128, 0.3);
@@ -187,33 +188,53 @@
         &__tabsBtn {
             padding: 5px 10px;
             border-radius: 5px;
-            border: 1px solid #707070;
-            color: #707070;
+            border: 1px solid #9ca3af;
+            color: #9ca3af;
             background: transparent;
 
             &.active,
             &:hover {
                 border-color: #23cc01;
-                background: linear-gradient(130deg, #23cc01, #01cc77, #01c5cc, #01cc46);
+                background: var(--Linear, linear-gradient(90deg, #00d100 -0.02%, #32b4b2 99.98%));
                 color: #fff;
             }
         }
 
         &__option {
             @include gridBox(5, 10px, 10px);
-            margin-top: 15px;
-        }
-
-        &__radio {
-            width: 15px;
-            height: 15px;
-            margin-right: 5px;
+            margin-top: 20px;
         }
 
         &__group {
-            cursor: pointer;
-            font-size: 14px;
-            @include flexBox(hor);
+            text-align: center;
+            border: 1px solid #9ca3af;
+            color: #9ca3af;
+            border-radius: 3px;
+            transition: all 0.3s;
+
+            &:hover {
+                color: #fff;
+                background: var(--Linear, linear-gradient(90deg, #00d100 -0.02%, #32b4b2 99.98%));
+                border-color: #01cc46;
+            }
+        }
+
+        &__select {
+            margin-top: 20px;
+            color: #000;
+            border-radius: 5px;
+            width: 100%;
+            padding: 5px;
+
+            &:focus-visible {
+                outline: none;
+            }
+        }
+
+        &__note {
+            margin-top: 20px;
+            text-align: center;
+            color: #fff;
         }
     }
 
@@ -274,4 +295,14 @@
 
 body.active {
     overflow-y: hidden;
+}
+
+/* Style cho nội dung tab hiện tại */
+.tab-content {
+    display: none;
+}
+
+/* Hiển thị nội dung tab được chọn */
+.active-tab {
+    display: block;
 }
