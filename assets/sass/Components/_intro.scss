@@ -109,6 +109,10 @@
         display: none;
         overflow: hidden !important;
 
+        @include responsive_mobile {
+            overflow-y: auto !important;
+        }
+
         &.active {
             display: block;
         }
@@ -143,6 +147,10 @@
             @include responsive_mobile {
                 max-width: 100%;
                 width: calc(100% - 30px);
+
+                top: 15px;
+                left: 15px;
+                transform: initial;
             }
         }
 
@@ -357,6 +365,74 @@
 
             @include responsive_bothTM {
                 padding: 0;
+            }
+        }
+    }
+
+    &-countdown {
+        &__wrap {
+            margin: -45px 0 30px;
+
+            @include responsive_mobile {
+                margin: -25px 0 30px;
+            }
+        }
+
+        &__title {
+            font-size: 24px;
+            text-transform: uppercase;
+            color: #fff;
+            text-align: center;
+            margin-bottom: 10px;
+
+            @include responsive_mobile {
+                font-size: 18px;
+            }
+        }
+
+        &__list {
+            @include flexBox(both);
+        }
+
+        &__item {
+            --width-count: 25px;
+
+            @include responsive_mobile {
+                --width-count: 15px;
+            }
+
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 121px;
+            height: 83px;
+            @include flexBox(both);
+
+            padding-bottom: 5px;
+            font-weight: 500;
+            padding-left: var(--width-count);
+
+            @include responsive_mobile {
+                width: 66px;
+                height: 50px;
+            }
+
+            & + & {
+                margin-left: 20px;
+
+                @include responsive_mobile {
+                    margin-left: 10px;
+                }
+            }
+        }
+
+        &__span {
+            letter-spacing: var(--width-count);
+            max-width: fit-content;
+            text-align: center;
+            font-size: 60px;
+
+            @include responsive_mobile {
+                font-size: 30px;
             }
         }
     }

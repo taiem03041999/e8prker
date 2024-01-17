@@ -3888,7 +3888,7 @@ header.header-scrolled .mobile-menu-category-content>nav>li .dropdown {
 
 .mobile-header {
   opacity: 0;
-  padding-bottom: 100px;
+  padding-bottom: 25px;
   transform: scale(0.7);
   transform-origin: right top;
   transition: all 0.4s;
