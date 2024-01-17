@@ -41,8 +41,24 @@
     }
 
     &-text {
+        &__cover {
+            @include responsive_mobile {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
         &__seemore {
             padding: 0.4rem 3.25rem;
+            width: fit-content;
+
+            & + & {
+                margin-left: 15px;
+
+                @include responsive_mobile {
+                    margin: 15px 0 0 0;
+                }
+            }
 
             @include responsive_bothTM {
                 font-size: 1rem;
@@ -126,6 +142,7 @@
 
             @include responsive_mobile {
                 max-width: 100%;
+                width: calc(100% - 30px);
             }
         }
 
@@ -271,6 +288,21 @@
 
             &.error {
                 color: #bd0000;
+            }
+        }
+
+        &__close {
+            border: 0;
+            background-color: transparent;
+            display: block;
+            margin-left: auto;
+
+            svg {
+                transition: all 0.3s;
+            }
+
+            &:hover svg {
+                fill: #fff;
             }
         }
     }
