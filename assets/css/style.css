@@ -327,10 +327,10 @@ input[type="number"] {
         .intro-cover__wrap .hide-on-bothTM {
           display: none !important; } }
   .intro-countdown__wrap {
-    margin: -45px 0 30px; }
+    margin: -45px 0 60px; }
     @media only screen and (max-width: 46.1875em) {
       .intro-countdown__wrap {
-        margin: -25px 0 30px; }
+        margin: -25px 0 40px; }
         .intro-countdown__wrap .hide-on-mobile {
           display: none; } }
   .intro-countdown__title {
@@ -351,6 +351,7 @@ input[type="number"] {
     justify-content: center;
     align-items: center; }
   .intro-countdown__item {
+    position: relative;
     --width-count: 25px;
     background-size: contain;
     background-repeat: no-repeat;
@@ -391,6 +392,17 @@ input[type="number"] {
       .intro-countdown__span {
         font-size: 30px; }
         .intro-countdown__span .hide-on-mobile {
+          display: none; } }
+  .intro-countdown__name {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%); }
+    @media only screen and (max-width: 46.1875em) {
+      .intro-countdown__name {
+        bottom: -25px;
+        font-size: 14px; }
+        .intro-countdown__name .hide-on-mobile {
           display: none; } }
 
 .banner {

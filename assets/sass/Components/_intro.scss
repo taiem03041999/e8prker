@@ -371,10 +371,10 @@
 
     &-countdown {
         &__wrap {
-            margin: -45px 0 30px;
+            margin: -45px 0 60px;
 
             @include responsive_mobile {
-                margin: -25px 0 30px;
+                margin: -25px 0 40px;
             }
         }
 
@@ -395,6 +395,7 @@
         }
 
         &__item {
+            position: relative;
             --width-count: 25px;
 
             @include responsive_mobile {
@@ -433,6 +434,18 @@
 
             @include responsive_mobile {
                 font-size: 30px;
+            }
+        }
+
+        &__name {
+            position: absolute;
+            bottom: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+
+            @include responsive_mobile {
+                bottom: -25px;
+                font-size: 14px;
             }
         }
     }
